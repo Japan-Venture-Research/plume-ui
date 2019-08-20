@@ -6,7 +6,6 @@
   "main": "dist/index.js",
   "style": "dist/index.css",
   "types": "dist/index.d.ts",
-  "private": true,
   "repository": "https://github.com/Japan-Venture-Research/plume-ui",
   "license": "MIT",
   "dependencies": {
