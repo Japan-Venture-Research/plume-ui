@@ -1,0 +1,37 @@
+.pl-tag {
+  padding: 3px 10px;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 13px;
+  transition: 0.3s;
+
+  &.is-light {
+    color: $gray80;
+    border-color: $gray70;
+    background-color: $white00;
+
+    &:hover,
+    &:focus {
+      background-color: $gray70;
+      color: $white00;
+    }
+  }
+
+  &.is-transparent {
+    color: $white00;
+    border-color: $white00;
+    background-color: "transparent";
+
+    &:hover,
+    &:focus {
+      background-color: $white00;
+      border-color: $white00;
+      color: $black10;
+    }
+  }
+
+  &.has-prefix {
+    padding-left: 7px;
+  }
+}

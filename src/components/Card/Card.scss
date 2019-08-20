@@ -1,0 +1,18 @@
+.pl-card {
+  background-color: $white00;
+  max-width: 100%;
+  position: relative;
+
+  .pl-card-image {
+      display: block;
+      position: relative;
+
+      .image {
+          width: 100%;
+      }
+  }
+
+  .pl-card-content {
+      padding: 15px;
+  }
+}

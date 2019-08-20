@@ -1,0 +1,50 @@
+{
+  "name": "plume-ui",
+  "description": "plume ui framework",
+  "version": "0.0.1",
+  "author": "yo7 <bloom6445@gmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "repository": "https://github.com/Japan-Venture-Research/plume-ui",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.3.3",
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15",
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "autoprefixer": "^9.6.1",
+    "css-loader": "^3.2.0",
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.7.0",
+    "sass-loader": "^7.2.0",
+    "style-loader": "^1.0.0",
+    "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "npm run clean && mkdir -p dist && run-p build:*",
+    "build:ts": "tsc --project ./tsconfig.build.json",
+    "build:css": "npm run prebuild:css && postcss --use autoprefixer --map false --output ./dist/index.css ./dist/index.css",
+    "prebuild:css": "node-sass --output-style expanded --source-map true ./src/index.scss ./dist/index.css",
+    "clean": "rimraf dist",
+    "fmt": "prettier --write '**/*{ts,tsx}'",
+    "docs": "docz dev",
+    "docs:build": "docz build",
+    "now-build": "yarn docs:build"
+  }
+}

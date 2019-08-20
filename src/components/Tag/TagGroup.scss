@@ -1,0 +1,11 @@
+.pl-tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  
+  .pl-tag {
+    margin-bottom: 0.35rem;
+  }
+  .pl-tag:not(:last-child) {
+    margin-right: 0.2rem;
+  }
+}

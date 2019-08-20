@@ -1,0 +1,88 @@
+.pl-button {
+  background-color: $white00;
+  border: 1px solid $gray80;
+  border-radius: 2px;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  color: $black10;
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  // Colors
+  &.is-white {
+    border-color: $white00;
+
+    &:hover {
+      background-color: $gray20;
+    }
+
+    &[disabled] {
+      background-color: $white00;
+    }
+  }
+
+  &.is-light {
+    border-color: $gray50;
+    background-color: $gray50;
+
+    &:hover {
+      border-color: $gray60;
+      background-color: $gray60;
+    }
+
+    &.is-outlined {
+      color: $gray60;
+      background-color: $white00;
+
+      &:hover {
+        background-color: $gray60;
+        color: $white00;
+      }
+    }
+
+    &[disabled] {
+      border-color: $gray60;
+      background-color: $gray60;
+    }
+  }
+
+  &.is-black {
+    color: $white00;
+    border-color: $black10;
+    background-color: $black10;
+
+    &.is-outlined {
+      color: $black10;
+      background-color: $white00;
+
+      &:hover {
+        color: $white00;
+        background-color: $black10;
+      }
+    }
+  }
+
+  // Size
+  &.is-small {
+    font-size: 0.75rem;
+  }
+  &.is-normal {
+    font-size: 1rem;
+  }
+  &.is-medium {
+    font-size: 1.25rem;
+  }
+  &.is-large {
+    font-size: 1.5rem;
+  }
+
+  // Rounded
+  &.is-rounded {
+    border-radius: 20px;
+  }
+}

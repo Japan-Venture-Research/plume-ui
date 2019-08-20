@@ -1,0 +1,11 @@
+// Styles
+@import "./styles/normalize";
+@import "./styles/global";
+@import "./styles/colors";
+
+// Components
+@import "./components/Tag/Tag";
+@import "./components//Button//Button";
+@import "./components/Button/ButtonGroup.scss";
+@import "./components/Divider/Divider.scss";
+@import "./components/Card/Card.scss";

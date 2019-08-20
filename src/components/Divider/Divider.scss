@@ -1,0 +1,12 @@
+.pl-divider {
+    border: none;
+    border-top: 1px solid $gray60;
+    // width: 90%;
+    height: 1px;
+    color: $white00;
+    background-color: $white00;
+
+    &.is-dashed {
+        border-top: 1px dashed $gray60;
+    }
+}

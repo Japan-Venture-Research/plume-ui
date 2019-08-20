@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["dom", "es2016"],
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "declaration": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "target": "es6"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
