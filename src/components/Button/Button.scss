@@ -7,10 +7,17 @@
   font-weight: 500;
   transition: 0.3s;
   color: $black10;
+  display: flex;
+  justify-content: center;
 
   &[disabled] {
     opacity: 0.5;
     cursor: not-allowed;
+  }
+
+  // Display
+  &.is-fullwidth {
+    width: 100%;
   }
 
   // Colors
