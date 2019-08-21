@@ -1,0 +1,71 @@
+$column-gap: 0.75rem;
+
+.pl-column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: $column-gap;
+
+  @for $i from 0 through 12 {
+    &.is-#{$i} {
+      flex: none;
+      width: percentage($i / 12)
+    }
+  }
+}
+
+.pl-column-group {
+  display: flex;
+  margin-top: (-$column-gap);
+  margin-left: (-$column-gap);
+  margin-right:  (-$column-gap);
+
+  &:last-of-type {
+    margin-bottom: (-$column-gap)
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: $column-gap;
+  }
+
+  &.is-gap-none {
+    margin-left: 0;
+    margin-right: 0;
+    
+    .pl-column {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &.is-gap-small {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+
+    .pl-column {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  &.is-gap-medium {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+
+    .pl-column {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }  
+
+  &.is-gap-large {
+    margin-left: -2rem;
+    margin-right: -2rem;
+
+    .pl-column {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }  
+}
