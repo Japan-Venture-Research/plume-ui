@@ -6,12 +6,19 @@ import { ButtonGroup } from './ButtonGroup'
 type Props = {
   color?: 'light' | 'black' | 'white'
   size?: 'small' | 'normal' | 'medium' | 'large'
+  outlined?: boolean
   rounded?: boolean
   disabled?: boolean
 } & BaseProps<'button'>
 
 export const Button = Object.assign(
-  ({ rounded = false, disabled = false, className, ...props }: Props) => {
+  ({
+    rounded = false,
+    disabled = false,
+    outlined = false,
+    className,
+    ...props
+  }: Props) => {
     const colorName = props.color && `is-${props.color}`
     const size = `is-${props.size || 'normal'}`
 
@@ -22,6 +29,7 @@ export const Button = Object.assign(
           'pl-button',
           colorName,
           size,
+          { 'is-outlined': outlined },
           { 'is-rounded': rounded },
           className
         )}
