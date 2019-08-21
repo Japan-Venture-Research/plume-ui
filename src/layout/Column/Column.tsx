@@ -8,13 +8,13 @@ export type ColumnProps = {
 } & BaseProps<'div' | 'span' | 'li' | 'a'>
 
 export const Column = Object.assign(
-  ({ as, className, ...props }: ColumnProps) => {
-    const size = props.size && `is-${props.size}`
+  ({ as, className, size, ...props }: ColumnProps) => {
+    const sizeClass = size && `is-${size}`
 
     return (
       <Base
         as={as || 'div'}
-        className={classNames('pl-column', size, className)}
+        className={classNames('pl-column', sizeClass, className)}
         {...props}
       />
     )

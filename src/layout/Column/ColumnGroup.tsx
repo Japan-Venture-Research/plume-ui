@@ -9,14 +9,15 @@ export type ColumnGroupProps = {
 export const ColumnGroup: React.FC<ColumnGroupProps> = ({
   as,
   className,
+  gapSize,
   ...props
 }) => {
-  const gapSize = props.gapSize && `is-gap-${props.gapSize}`
+  const gapSizeClass = gapSize && `is-gap-${gapSize}`
 
   return (
     <Base
       as={as || 'div'}
-      className={classNames('pl-column-group', gapSize, className)}
+      className={classNames('pl-column-group', gapSizeClass, className)}
       {...props}
     />
   )
