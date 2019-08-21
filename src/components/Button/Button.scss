@@ -8,10 +8,6 @@
   transition: 0.3s;
   color: $black10;
 
-  &.is-outlined {
-    background-color: transparent;
-  }
-
   &[disabled] {
     opacity: 0.5;
     cursor: not-allowed;
@@ -41,6 +37,7 @@
 
     &.is-outlined {
       color: $gray60;
+      background-color: transparent;
 
       &:hover {
         background-color: $gray60;
@@ -61,6 +58,7 @@
 
     &.is-outlined {
       color: $black10;
+      background-color: transparent;
 
       &:hover {
         color: $white00;
