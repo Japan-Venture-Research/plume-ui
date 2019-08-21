@@ -1,4 +1,9 @@
 .pl-button-group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
   .pl-button:not(:last-of-type) {
     margin-right: 0.5rem;
   }

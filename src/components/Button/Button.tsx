@@ -9,6 +9,7 @@ type Props = {
   outlined?: boolean
   rounded?: boolean
   disabled?: boolean
+  fullwidth?: boolean
 } & BaseProps<'button'>
 
 export const Button = Object.assign(
@@ -16,6 +17,7 @@ export const Button = Object.assign(
     rounded = false,
     disabled = false,
     outlined = false,
+    fullwidth = false,
     className,
     ...props
   }: Props) => {
@@ -31,6 +33,7 @@ export const Button = Object.assign(
           size,
           { 'is-outlined': outlined },
           { 'is-rounded': rounded },
+          { 'is-fullwidth': fullwidth },
           className
         )}
         disabled={disabled}
