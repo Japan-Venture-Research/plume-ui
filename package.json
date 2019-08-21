@@ -36,15 +36,11 @@
     "react-dom": "^16.9.0"
   },
   "scripts": {
-    "prepare": "npm run build",
     "build": "npm run clean && mkdir -p dist && run-p build:*",
     "build:ts": "tsc --project ./tsconfig.build.json",
     "build:css": "npm run prebuild:css && postcss --use autoprefixer --map false --output ./dist/index.css ./dist/index.css",
     "prebuild:css": "node-sass --output-style expanded --source-map true ./src/index.scss ./dist/index.css",
     "clean": "rimraf dist",
-    "fmt": "prettier --write '**/*{ts,tsx}'",
-    "docs": "docz dev",
-    "docs:build": "docz build",
-    "now-build": "yarn docs:build"
+    "fmt": "prettier --write '**/*{ts,tsx}'"
   }
 }
