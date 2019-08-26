@@ -41,6 +41,7 @@
     "build:css": "npm run prebuild:css && postcss --use autoprefixer --map false --output ./dist/index.css ./dist/index.css",
     "prebuild:css": "node-sass --output-style expanded --source-map true ./src/index.scss ./dist/index.css",
     "clean": "rimraf dist",
-    "fmt": "prettier --write 'src/**/*{ts,tsx,scss}'"
+    "fmt": "prettier --write 'src/**/*{ts,tsx,scss}'",
+    "lint": "prettier --check 'src/**/*{ts,tsx,scss}'"
   }
 }
