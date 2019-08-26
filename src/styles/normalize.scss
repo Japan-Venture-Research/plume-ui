@@ -2,13 +2,13 @@
 
 // border-box
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /**
@@ -17,16 +17,16 @@ html {
  */
 
 html {
-	line-height: 1.15; /* 1 */
-	-webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /**
  * Remove the margin in all browsers.
  */
 
- body {
-	margin: 0;
+body {
+  margin: 0;
 }
 
 /**
@@ -38,29 +38,30 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
-	margin: 0; /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
  * Remove the inheritance of text transform in Edge and Firefox.
  * 1. Remove the inheritance of text transform in Firefox.
  */
- button,
- select { /* 1 */
-     text-transform: none;
- }
- 
- /**
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-	-webkit-appearance: button;
+  -webkit-appearance: button;
 }
 
 /**
@@ -70,11 +71,11 @@ button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
- }
+  border-style: none;
+  padding: 0;
+}
 
- /**
+/**
  * Restore the focus styles unset by the previous rule.
  */
 
@@ -82,7 +83,5 @@ button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
-	outline: 1px dotted ButtonText;
+  outline: 1px dotted ButtonText;
 }
-
- 
