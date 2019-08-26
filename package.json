@@ -42,6 +42,7 @@
     "prebuild:css": "node-sass --output-style expanded --source-map true ./src/index.scss ./dist/index.css",
     "clean": "rimraf dist",
     "fmt": "prettier --write 'src/**/*{ts,tsx,scss}'",
-    "lint": "prettier --check 'src/**/*{ts,tsx,scss}'"
+    "lint": "prettier --check 'src/**/*{ts,tsx,scss}'",
+    "typecheck": "tsc --noEmit"
   }
 }
