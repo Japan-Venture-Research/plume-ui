@@ -36,11 +36,14 @@
     "react-dom": "^16.9.0"
   },
   "scripts": {
-    "build": "npm run clean && mkdir -p dist && run-p build:*",
+    "build": "npm run clean && run-p build:*",
     "build:ts": "tsc --project ./tsconfig.build.json",
-    "build:css": "npm run prebuild:css && postcss --use autoprefixer --map false --output ./dist/index.css ./dist/index.css",
-    "prebuild:css": "node-sass --output-style expanded --source-map true ./src/index.scss ./dist/index.css",
-    "clean": "rimraf dist",
+    "build:css": "npm run prebuild:scss && postcss --use autoprefixer --map false --output ./dist/index.css ./dist/index.css",
+    "prebuild:scss": "node-sass --output-style expanded --source-map true ./src/index.scss ./dist/index.css",
+    "start": "run-p watch:*",
+    "watch:ts": "npm run build:ts -- --watch",
+    "watch:scss": "npm run prebuild:scss -- --watch",
+    "clean": "rimraf dist && mkdir -p dist",
     "fmt": "prettier --write 'src/**/*{ts,tsx,scss}'",
     "lint": "prettier --check 'src/**/*{ts,tsx,scss}'",
     "typecheck": "tsc --noEmit"
