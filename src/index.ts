@@ -1,5 +1,6 @@
 // Styles
 export { colors } from './styles/colors'
+export { breakpoint, Breakpoint } from './styles/breankpoint'
 
 // Components
 export { Tag, TagProps, TagGroupProps } from './components/Tag/Tag'
