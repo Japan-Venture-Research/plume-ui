@@ -14,6 +14,8 @@ describe('max', () => {
 
 describe('between', () => {
   it('returns min-width adn max-width media query statement from given number', () => {
-    expect(mq.between(500, 800)).toEqual(`@media (min-width: 500px) and (max-width: 800px)`)
+    expect(mq.between(500, 800)).toEqual(
+      `@media (min-width: 500px) and (max-width: 800px)`
+    )
   })
 })
