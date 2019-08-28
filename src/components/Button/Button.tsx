@@ -3,30 +3,33 @@ import classNames from 'classnames'
 import { Base, BaseProps } from '../../internal/Base'
 import { ButtonGroup } from './ButtonGroup'
 
-type Props = {
+const defaultTag = 'span'
+type Available = typeof defaultTag | 'span'
+
+type ButtonProps<T extends Available> = {
   color?: 'light' | 'black' | 'white'
   size?: 'small' | 'normal' | 'medium' | 'large'
   outlined?: boolean
   rounded?: boolean
   disabled?: boolean
   fullwidth?: boolean
-} & BaseProps<'button'>
+} & BaseProps<T>
 
 export const Button = Object.assign(
-  ({
+  <T extends Available = typeof defaultTag>({
     rounded = false,
     disabled = false,
     outlined = false,
     fullwidth = false,
     className,
     ...props
-  }: Props) => {
+  }: ButtonProps<T>) => {
     const colorName = props.color && `is-${props.color}`
     const size = `is-${props.size || 'normal'}`
 
     return (
       <Base
-        as={props.as || 'button'}
+        as={props.as || defaultTag}
         className={classNames(
           'pl-button',
           colorName,

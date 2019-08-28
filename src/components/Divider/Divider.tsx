@@ -2,15 +2,17 @@ import * as React from 'react'
 import classNames from 'classnames'
 import { Base, BaseProps } from '../../internal/Base'
 
-type Props = {
-  dashed?: boolean
-} & BaseProps<'hr' | 'div' | 'span'>
+type Available = 'hr' | 'div' | 'span'
 
-export const Divider: React.FC<Props> = ({
+type Props<T extends Available> = {
+  dashed?: boolean
+} & BaseProps<T>
+
+export const Divider = <T extends Available>({
   dashed = false,
   className,
   ...props
-}) => {
+}: Props<T>) => {
   return (
     <Base
       as={props.as || 'hr'}

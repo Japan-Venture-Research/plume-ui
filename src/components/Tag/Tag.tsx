@@ -5,14 +5,21 @@ import { TagGroup } from './TagGroup'
 
 type TagColor = 'light' | 'transparent'
 
-type Props = {
+const defaultTag = 'span'
+type Available = typeof defaultTag | 'a'
+
+type TagProps<T extends Available> = {
   children: string
   color?: TagColor
   prefix?: string
-} & BaseProps<'span' | 'a'>
+} & BaseProps<T>
 
 export const Tag = Object.assign(
-  ({ color = 'light', className, ...props }: Props) => {
+  <T extends Available = typeof defaultTag>({
+    color = 'light',
+    className,
+    ...props
+  }: TagProps<T>) => {
     const colorName = `is-${color}`
 
     const text = props.prefix
@@ -21,7 +28,7 @@ export const Tag = Object.assign(
 
     return (
       <Base
-        as={props.as || 'span'}
+        as={props.as || defaultTag}
         className={classNames(
           'pl-tag',
           colorName,

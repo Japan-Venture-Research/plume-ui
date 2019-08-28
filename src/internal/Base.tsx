@@ -7,6 +7,6 @@ export type BaseProps<K extends keyof React.ReactHTML> = {
 } & React.ComponentPropsWithoutRef<K>
 
 export const Base = <K extends keyof React.ReactHTML>(props: BaseProps<K>) => {
-  const { as: tagAs, ...rest } = props
-  return React.createElement(tagAs || 'div', rest)
+  const { as, ...rest } = props
+  return React.createElement(as || 'div', rest)
 }
