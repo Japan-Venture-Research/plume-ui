@@ -20,5 +20,8 @@ export {
 // Layout
 export { Column, ColumnProps, ColumnGroupProps } from './layout/Column/Column'
 
+// Helpers
+export { mq } from './helpers/responsive'
+
 // Internal
 export { Base, BaseProps } from './internal/Base'

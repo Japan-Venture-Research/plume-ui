@@ -1,22 +1,23 @@
-import { Breakpoint, breakpoint } from '../../styles/breankpoint'
+import { breakpoint } from '../../styles/breankpoint'
 
-/**
- * Return media query of given breakpoint key or number
- */
-export const mq = (n: keyof Breakpoint | number) => {
-  if (typeof n === 'number') {
-    return `@media (min-width: ${n}px)`
-  }
+const min = (from: number) => {
+  return `@media (min-width: ${from}px)`
+}
 
-  const arr = Object.keys(breakpoint).map(k => [
-    k,
-    breakpoint[k as keyof Breakpoint],
-  ])
+const max = (to: number) => {
+  return `@media (max-width: ${to}px)`
+}
 
-  const [result] = arr.reduce((acc, [name, size]) => {
-    if (n === name) return [...acc, `@media (min-width: ${size}px)`]
-    return acc
-  }, [])
+const between = (from: number, to: number) => {
+  return `@media (min-width: ${from}px) and (max-width: ${to}px)`
+}
 
-  return result
+export const mq = {
+  min,
+  max,
+  between,
+  small: max(breakpoint.medium - 1),
+  middle: min(breakpoint.medium),
+  middleOnly: between(breakpoint.medium, breakpoint.large - 1),
+  large: min(breakpoint.large),
 }
