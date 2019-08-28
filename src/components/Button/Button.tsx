@@ -1,12 +1,14 @@
-import * as React from 'react'
 import classNames from 'classnames'
+import * as React from 'react'
 import { Base, BaseProps } from '../../internal/Base'
 import { ButtonGroup } from './ButtonGroup'
+
+export { ButtonGroupProps } from './ButtonGroup'
 
 const defaultTag = 'span'
 type Available = typeof defaultTag | 'span'
 
-type ButtonProps<T extends Available> = {
+export type ButtonProps<T extends Available = typeof defaultTag> = {
   color?: 'light' | 'black' | 'white'
   size?: 'small' | 'normal' | 'medium' | 'large'
   outlined?: boolean
@@ -16,7 +18,7 @@ type ButtonProps<T extends Available> = {
 } & BaseProps<T>
 
 export const Button = Object.assign(
-  <T extends Available = typeof defaultTag>({
+  <T extends Available>({
     rounded = false,
     disabled = false,
     outlined = false,

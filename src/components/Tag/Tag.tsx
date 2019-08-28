@@ -3,19 +3,21 @@ import classNames from 'classnames'
 import { Base, BaseProps } from '../../internal/Base'
 import { TagGroup } from './TagGroup'
 
+export { TagGroupProps } from './TagGroup'
+
 type TagColor = 'light' | 'transparent'
 
 const defaultTag = 'span'
 type Available = typeof defaultTag | 'a'
 
-type TagProps<T extends Available> = {
+export type TagProps<T extends Available = typeof defaultTag> = {
   children: string
   color?: TagColor
   prefix?: string
 } & BaseProps<T>
 
 export const Tag = Object.assign(
-  <T extends Available = typeof defaultTag>({
+  <T extends Available>({
     color = 'light',
     className,
     ...props

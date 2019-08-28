@@ -2,14 +2,24 @@ import * as React from 'react'
 import classNames from 'classnames'
 import { Base, BaseProps } from '../../internal/Base'
 
-type Props = {} & BaseProps<'div' | 'a'>
+const defaultTag = 'div'
+type Available = typeof defaultTag | 'a'
 
-export const CardContent: React.FC<Props> = ({ className, ...props }) => {
+export type CardContentProps<
+  T extends Available = typeof defaultTag
+> = {} & BaseProps<T>
+
+export const CardContent = <T extends Available>({
+  className,
+  ...props
+}: CardContentProps<T>) => {
   return (
     <Base
-      as={props.as || 'div'}
+      as={props.as || defaultTag}
       className={classNames('pl-card-content', className)}
       {...props}
     />
   )
 }
+
+CardContent.displayName = 'CardContent'

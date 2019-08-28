@@ -9,7 +9,7 @@ export type ButtonGroupProps<
   T extends Available = typeof defaultTag
 > = {} & BaseProps<T>
 
-export const ButtonGroup = <T extends Available = typeof defaultTag>({
+export const ButtonGroup = <T extends Available>({
   className,
   ...props
 }: ButtonGroupProps<T>) => {

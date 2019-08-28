@@ -2,23 +2,27 @@ import * as React from 'react'
 import classNames from 'classnames'
 import { Base, BaseProps } from '../../internal/Base'
 
-export type ColumnGroupProps = {
-  gapSize?: 'none' | 'small' | 'medium' | 'large'
-} & BaseProps<'div' | 'span' | 'ul'>
+const defaultTag = 'div'
+type Available = typeof defaultTag | 'span' | 'ul'
 
-export const ColumnGroup: React.FC<ColumnGroupProps> = ({
-  as,
+export type ColumnGroupProps<T extends Available = typeof defaultTag> = {
+  gapSize?: 'none' | 'small' | 'medium' | 'large'
+} & BaseProps<T>
+
+export const ColumnGroup = <T extends Available>({
   className,
   gapSize,
   ...props
-}) => {
+}: ColumnGroupProps<T>) => {
   const gapSizeClass = gapSize && `is-gap-${gapSize}`
 
   return (
     <Base
-      as={as || 'div'}
+      as={props.as || defaultTag}
       className={classNames('pl-column-group', gapSizeClass, className)}
       {...props}
     />
   )
 }
+
+ColumnGroup.displayName = 'ColumnGroup'

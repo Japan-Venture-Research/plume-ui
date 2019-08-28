@@ -2,14 +2,20 @@ import * as React from 'react'
 import classNames from 'classnames'
 import { Base, BaseProps } from '../../internal/Base'
 
-type Props = {
-  src: string
-} & BaseProps<'div' | 'a'>
+const defaultTag = 'div'
+type Available = typeof defaultTag | 'a'
 
-export const CardImage: React.FC<Props> = ({ className, ...props }) => {
+export type CardImageProps<T extends Available = typeof defaultTag> = {
+  src: string
+} & BaseProps<T>
+
+export const CardImage = <T extends Available>({
+  className,
+  ...props
+}: CardImageProps<T>) => {
   return (
     <Base
-      as={props.as || 'div'}
+      as={props.as || defaultTag}
       className={classNames('pl-card-image', className)}
       {...props}
     >
@@ -20,3 +26,5 @@ export const CardImage: React.FC<Props> = ({ className, ...props }) => {
     </Base>
   )
 }
+
+CardImage.displayName = 'CardImage'
