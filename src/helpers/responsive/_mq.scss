@@ -1,0 +1,21 @@
+@mixin mq($size) {
+  @if $size == small {
+    @media (max-width: $middle - 1) {
+      @content;
+    }
+  } @else if $size == middle {
+    @media (min-width: $middle) {
+      @content;
+    }
+  } @else if $size == middle-only {
+    @media (min-width: $middle) and (max-width: $large - 1) {
+      @content;
+    }
+  } @else if $size == large {
+    @media (min-width: $large) {
+      @content;
+    }
+  } @else {
+    @error "size must be specified";
+  }
+}
