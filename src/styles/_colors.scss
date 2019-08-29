@@ -1,20 +1,56 @@
+$white00: #fff;
+$white10: #fafafa;
 $black10: #161616;
 $black20: #2a2a2a;
 $black30: #333;
 $gray20: #fafbfa;
 $gray30: #f8f9f8;
 $gray40: #f1f2f1;
-$gray50: #e0e1df;
+$gray50: #e0e0e0;
 $gray60: #ccc;
 $gray70: #aaa;
 $gray80: #999;
 $gray90: #666;
+$red50: #ea6e67;
+$red60: #e7574f;
+$blue50: #337ab7;
+$cyan10: #f0f6f8;
+$cyan40: #a4dae6;
+$cyan50: #84cad9;
+$blue-gray30: #e4e8e9;
+$blue-gray40: #b8bec6;
 $blue-gray50: #9ca4b0;
-$blue-gray-60: #798392;
-$white00: #fff;
-$primary50: #f75856;
-$primary60: #e94846;
-$secondary50: #0070c9;
-$secondary40: #42a1ec;
-$twittercolor: #1da1f2;
-$facebookcolor: #3b5998;
+$blue-gray-60: #7c838f;
+
+// SNS
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$hatena: #00a4de;
+$pocket: #ef4056;
+$newspicks: #222;
+
+// Graduation
+$grad-black: linear-gradient(225deg, $black20 0%, $black30 62%, $black10 100%);
+$grad-deep-green: linear-gradient(225deg, #3ba395 0%, #21789a 100%);
+$grad-orange-pink: linear-gradient(
+  225deg,
+  #d754ad 0%,
+  #f96785 59%,
+  #fe7333 100%
+);
+$grad-silver: linear-gradient(225deg, #e6e9ed 0%, #eef1f6 50%, #d1d8dc 100%);
+
+// text
+$text: $black30;
+$text-invert: $white00;
+$text-strong: $black10;
+$text-light: $gray80;
+$link: $blue50;
+$link-invert: $white00;
+
+// border
+$border: $gray50;
+$border-invert: $white00;
+
+// background
+$background-gray: $gray40;
