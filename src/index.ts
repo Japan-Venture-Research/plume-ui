@@ -1,5 +1,6 @@
 // Styles
 export { colors } from './styles/colors'
+export { breakpoint, Breakpoint } from './styles/breankpoint'
 
 // Components
 export { Tag, TagProps, TagGroupProps } from './components/Tag/Tag'
@@ -18,6 +19,9 @@ export {
 
 // Layout
 export { Column, ColumnProps, ColumnGroupProps } from './layout/Column/Column'
+
+// Helpers
+export { mq } from './helpers/responsive'
 
 // Internal
 export { Base, BaseProps } from './internal/Base'
