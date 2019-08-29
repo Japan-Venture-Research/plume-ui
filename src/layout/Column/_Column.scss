@@ -6,20 +6,48 @@ $column-gap: 0.75rem;
   flex-grow: 1;
   flex-shrink: 1;
   padding: $column-gap;
-
-  @for $i from 0 through 12 {
-    &.is-#{$i} {
-      flex: none;
-      width: percentage($i / 12);
-    }
-  }
 }
 
 .pl-column-group {
-  display: flex;
   margin-top: (-$column-gap);
   margin-left: (-$column-gap);
   margin-right: (-$column-gap);
+
+  // work from large by default
+  @include mq(large) {
+    display: flex;
+
+    @for $i from 0 through 12 {
+      .pl-column.is-#{$i} {
+        flex: none;
+        width: percentage($i / 12);
+      }
+    }
+  }
+
+  &.from-small {
+    display: flex;
+
+    @for $i from 0 through 12 {
+      .pl-column.is-#{$i} {
+        flex: none;
+        width: percentage($i / 12);
+      }
+    }
+  }
+
+  &.from-middle {
+    @include mq(middle) {
+      display: flex;
+
+      @for $i from 0 through 12 {
+        .pl-column.is-#{$i} {
+          flex: none;
+          width: percentage($i / 12);
+        }
+      }
+    }
+  }
 
   &:last-of-type {
     margin-bottom: (-$column-gap);
