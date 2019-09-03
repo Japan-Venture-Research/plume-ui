@@ -39,10 +39,11 @@
     "react-dom": "^16.9.0"
   },
   "scripts": {
-    "build": "npm run clean && run-p build:*",
+    "build": "npm run clean && run-p build:* && npm run copy:sass",
     "build:ts": "tsc --project ./tsconfig.build.json",
     "build:css": "npm run prebuild:scss && postcss --use autoprefixer --map false --output ./dist/index.css ./dist/index.css",
-    "prebuild:scss": "node-sass --output-style expanded --source-map true ./src/index.scss ./dist/index.css",
+    "prebuild:scss": "node-sass --output-style expanded --source-map true ./src/_index.scss ./dist/index.css",
+    "copy:sass": "cd src && find . -name '*.scss' | cpio -pdm ../dist && cd -",
     "start": "run-p watch:*",
     "watch:ts": "npm run build:ts -- --watch",
     "watch:scss": "npm run prebuild:scss -- --watch",
