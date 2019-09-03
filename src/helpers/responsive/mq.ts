@@ -1,4 +1,4 @@
-import { breakpoint } from '../../styles/breankpoint'
+import { breakpoint } from '../../styles/breakpoint'
 
 const min = (from: number) => {
   return `@media (min-width: ${from}px)`

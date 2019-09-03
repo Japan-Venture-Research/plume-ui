@@ -1,6 +1,6 @@
 // Styles
 export { colors } from './styles/colors'
-export { breakpoint, Breakpoint } from './styles/breankpoint'
+export { breakpoint, Breakpoint } from './styles/breakpoint'
 export { globalFont, displayFont } from './styles/font'
 
 // Components
