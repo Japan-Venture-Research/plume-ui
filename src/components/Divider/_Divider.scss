@@ -1,6 +1,6 @@
 .pl-divider {
   border: none;
-  border-top: 1px solid $gray60;
+  border-top: 1px solid $border;
   height: 1px;
   color: $white00;
   background-color: $white00;
@@ -9,6 +9,14 @@
 
   &.is-dashed {
     border: none;
-    border-top: 1px dashed $gray60;
+    border-top: 1px dashed $border;
+
+    &.is-invert {
+      border-top-color: $border-invert;
+    }
+  }
+
+  &.is-invert {
+    border-top-color: $border-invert;
   }
 }
