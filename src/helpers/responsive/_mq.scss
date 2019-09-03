@@ -1,3 +1,5 @@
+$sizes: small, middle, middle-only, large;
+
 @mixin mq($size) {
   @if $size == small {
     @media (max-width: $middle - 1) {
