@@ -7,13 +7,13 @@
   transition: 0.3s;
 
   &.is-light {
-    color: $gray80;
-    border-color: $gray70;
+    color: $blue-gray40;
+    border-color: $blue-gray40;
     background-color: $white00;
 
     &:hover,
     &:focus {
-      background-color: $gray70;
+      background-color: $blue-gray40;
       color: $white00;
     }
   }

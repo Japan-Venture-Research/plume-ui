@@ -1,4 +1,4 @@
 export interface SpacingModifiable {
-  marginless?: boolean
-  paddingless?: boolean
+  marginless: boolean
+  paddingless: boolean
 }

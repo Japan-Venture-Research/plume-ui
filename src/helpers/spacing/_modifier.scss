@@ -5,3 +5,19 @@
 .is-paddingless {
   padding: 0 !important;
 }
+
+@each $size in $sizes {
+  .is-marginless-#{$size} {
+    @include mq(#{$size}) {
+      margin: 0 !important;
+    }
+  }
+}
+
+@each $size in $sizes {
+  .is-padding-#{$size} {
+    @include mq(#{$size}) {
+      padding: 0 !important;
+    }
+  }
+}
