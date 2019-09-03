@@ -1,9 +1,12 @@
+$base-letter-spacing: 0.018em !default;
+
 html {
   font-family: $global-font !important;
 }
 
 body {
   color: $text;
+  letter-spacing: $base-letter-spacing;
 }
 
 h1,
