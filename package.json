@@ -48,8 +48,8 @@
     "watch:ts": "npm run build:ts -- --watch",
     "watch:scss": "npm run prebuild:scss -- --watch",
     "clean": "rimraf dist && mkdir -p dist",
-    "fmt": "prettier --write 'src/**/*{ts,tsx,scss}'",
     "lint": "prettier --check 'src/**/*{ts,tsx,scss}'",
+    "lint:fix": "prettier --write 'src/**/*{ts,tsx,scss}'",
     "typecheck": "tsc --noEmit",
     "test": "jest"
   }
