@@ -1,12 +1,8 @@
 name: lint / test
 on: [push]
 jobs:
-  test:
-    name: run lint / tests
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [8, 10, 12]
     steps:
       - uses: actions/checkout@v1
       - name: setup node
@@ -17,9 +13,18 @@ jobs:
         uses: actions/npm@master
         with:
           args: install
-      - name: lint
+      - name: lint / test
         run: |
           npm run lint
           npm run test:type
           npm run test
-
+      - name: tag
+        uses: actions/bin/filter@master
+        with:
+          args: tag
+      - name: publish
+        uses: actions/npm@master
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        with:
+          args: publish --access public
