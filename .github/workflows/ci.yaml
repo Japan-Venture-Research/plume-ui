@@ -1,5 +1,6 @@
-name: build
-on: [push]
+name: Build
+
+on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,13 +19,3 @@ jobs:
           npm run lint
           npm run test:type
           npm run test
-      - name: tag
-        uses: actions/bin/filter@master
-        with:
-          args: tag
-      - name: publish
-        uses: actions/npm@master
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        with:
-          args: publish --access public
