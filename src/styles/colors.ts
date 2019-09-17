@@ -18,8 +18,8 @@ const baseColors = {
   cyan40: '#a4dae6',
   cyan50: '#84cad9',
   blueGray20: '#e7eeef',
-  blueGray30: '#e4e8e9',
-  blueGray40: '#b8bec6',
+  blueGray30: '#d2d6db',
+  blueGray40: '#b5bbc4',
   blueGray50: '#9ca4b0',
   blueGray60: '#7c838f',
 
@@ -50,7 +50,9 @@ const aliasColors = {
 
   // border
   border: baseColors.gray50,
+  borderLight: baseColors.gray40,
   borderInvert: baseColors.white00,
+  borderStrong: baseColors.black10,
 
   // background
   backgroundGray: baseColors.gray40,
