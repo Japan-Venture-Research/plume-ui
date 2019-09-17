@@ -2,18 +2,24 @@ name: lint / test
 on: [push]
 jobs:
   test:
-    name: run lint and tests
+    name: run lint / tests
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [8, 10, 12]
     steps:
       - uses: actions/checkout@v1
-      - name: setup node ${{ matrix.node-version }}
+      - name: setup node
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run test:type
-      - run: npm run test
+          node-version: 10.x
+      - name: install
+        uses: actions/npm@master
+        with:
+          args: install
+      - name: lint
+        run: |
+          npm run lint
+          npm run test:type
+          npm run test
+
