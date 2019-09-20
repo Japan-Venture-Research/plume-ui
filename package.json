@@ -39,7 +39,8 @@
     "react-dom": "^16.9.0"
   },
   "scripts": {
-    "build": "npm run clean && run-p build:*",
+    "prepublishOnly": "run-s clean lint build",
+    "build": "run-p build:*",
     "build:ts": "tsc --project ./tsconfig.build.json",
     "build:css": "npm run prebuild:scss && postcss --use autoprefixer --map false --output ./dist/index.css ./dist/index.css",
     "prebuild:scss": "node-sass --output-style expanded --source-map true ./src/main.scss ./dist/index.css",
