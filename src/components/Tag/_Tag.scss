@@ -1,14 +1,14 @@
 .pl-tag {
-  padding: 4px 10px;
-  border-radius: 15px;
+  padding: 5px 12px;
+  border-radius: $radius-rounded;
   border-width: 1px;
   border-style: solid;
   font-size: 13px;
   transition: 0.3s;
 
   &.is-light {
-    color: $blue-gray40;
-    border-color: $blue-gray40;
+    color: $blue-gray50;
+    border-color: $blue-gray30;
     background-color: $white00;
 
     &:hover,
