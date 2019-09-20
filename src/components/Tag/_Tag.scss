@@ -5,6 +5,8 @@
   border-style: solid;
   font-size: 13px;
   transition: 0.3s;
+  line-height: 1;
+  display: inline-block;
 
   &.is-light {
     color: $blue-gray50;
@@ -16,7 +18,32 @@
       background-color: $blue-gray40;
       color: $white00;
     }
+
+    &.is-inverted {
+      color: $white00;
+      border-color: $blue-gray50;
+      background-color: $blue-gray50;
+    }
   }
+
+  &.is-red {
+    color: $red60;
+    border-color: $red50;
+    background-color: $white00;
+
+    &:hover,
+    &:focus {
+      background-color: $red50;
+      color: $white00;
+    }
+
+    &.is-inverted {
+      color: $white00;
+      border-color: $red60;
+      background-color: $red60;
+    }
+  }
+
 
   &.is-transparent {
     color: $white00;
@@ -29,6 +56,11 @@
       border-color: $white00;
       color: $black10;
     }
+  }
+
+  &.is-square {
+    padding: 3px 10px;
+    border-radius: $radius;
   }
 
   &.has-prefix {
