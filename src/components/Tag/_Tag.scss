@@ -1,20 +1,46 @@
 .pl-tag {
-  padding: 4px 10px;
-  border-radius: 15px;
+  padding: 5px 12px;
+  border-radius: $radius-rounded;
   border-width: 1px;
   border-style: solid;
   font-size: 13px;
   transition: 0.3s;
+  line-height: 1;
+  display: inline-block;
 
   &.is-light {
-    color: $blue-gray40;
-    border-color: $blue-gray40;
+    color: $blue-gray50;
+    border-color: $blue-gray30;
     background-color: $white00;
 
     &:hover,
     &:focus {
-      background-color: $blue-gray40;
+      background-color: $blue-gray30;
       color: $white00;
+    }
+
+    &.is-inverted {
+      color: $white00;
+      border-color: $blue-gray50;
+      background-color: $blue-gray50;
+    }
+  }
+
+  &.is-red {
+    color: $red60;
+    border-color: $red50;
+    background-color: $white00;
+
+    &:hover,
+    &:focus {
+      background-color: $red50;
+      color: $white00;
+    }
+
+    &.is-inverted {
+      color: $white00;
+      border-color: $red60;
+      background-color: $red60;
     }
   }
 
@@ -29,6 +55,11 @@
       border-color: $white00;
       color: $black10;
     }
+  }
+
+  &.is-square {
+    padding: 3px 10px;
+    border-radius: $radius;
   }
 
   &.has-prefix {

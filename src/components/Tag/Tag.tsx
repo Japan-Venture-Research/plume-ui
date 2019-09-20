@@ -13,6 +13,8 @@ type Available = typeof defaultTag | 'a'
 export type TagProps<T extends Available = typeof defaultTag> = {
   children: string
   color?: TagColor
+  square?: boolean
+  inverted?: boolean
   prefix?: string
 } & BaseProps<T>
 
@@ -34,6 +36,12 @@ export const Tag = Object.assign(
         className={classNames(
           'pl-tag',
           colorName,
+          {
+            'is-square': props.square,
+          },
+          {
+            'is-inverted': props.inverted,
+          },
           {
             'has-prefix': props.prefix,
           },
