@@ -37,10 +37,10 @@ export const Tag = Object.assign(
           'pl-tag',
           colorName,
           {
-            'is-square': props.square
+            'is-square': props.square,
           },
           {
-            'is-inverted': props.inverted
+            'is-inverted': props.inverted,
           },
           {
             'has-prefix': props.prefix,
