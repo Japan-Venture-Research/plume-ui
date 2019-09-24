@@ -21,8 +21,13 @@
 
     &.is-inverted {
       color: $white00;
-      border-color: $blue-gray50;
-      background-color: $blue-gray50;
+      border-color: $blue-gray40;
+      background-color: $blue-gray40;
+      &:hover,
+      &:focus {
+        border-color: $blue-gray50;
+        background-color: $blue-gray50;
+      }
     }
   }
 
