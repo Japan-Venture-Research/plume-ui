@@ -1,4 +1,4 @@
-$sizes: small, middle, middle-only, large;
+$sizes: small, middle, middle-only, large extra-large;
 
 @mixin mq($size) {
   @if $size == small {
@@ -15,6 +15,14 @@ $sizes: small, middle, middle-only, large;
     }
   } @else if $size == large {
     @media (min-width: $large) {
+      @content;
+    }
+  } @else if $size == large-only {
+    @media (min-width: $large) and (max-width: $extra-large - 1) {
+      @content;
+    }
+  } @else if $size == extra-large {
+    @media (min-width: $extra-large) {
       @content;
     }
   } @else {
