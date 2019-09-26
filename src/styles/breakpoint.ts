@@ -1,9 +1,11 @@
 export interface Breakpoint {
-  medium: number
+  middle: number
   large: number
+  extraLarge: number
 }
 
 export const breakpoint: Breakpoint = {
-  medium: 420,
+  middle: 420,
   large: 770,
+  extraLarge: 1120,
 }
