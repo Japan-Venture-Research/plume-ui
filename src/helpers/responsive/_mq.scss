@@ -25,6 +25,14 @@ $sizes: small, middle, middle-only, large extra-large;
     @media (min-width: $extra-large) {
       @content;
     }
+  } @else if $size == until-middle {
+    @media (max-width: $large - 1) {
+      @content;
+    }
+  } @else if $size == until-large {
+    @media (max-width: $extra-large - 1) {
+      @content;
+    }
   } @else {
     @error "size must be specified";
   }
