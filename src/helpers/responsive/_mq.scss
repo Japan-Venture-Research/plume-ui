@@ -1,4 +1,5 @@
-$sizes: small, medium, medium-only, large, large-only, extra-large, until-medium, until-large;
+$sizes: small, medium, medium-only, large, large-only, extra-large, until-medium,
+  until-large;
 
 @mixin mq($size) {
   @if $size == small {
