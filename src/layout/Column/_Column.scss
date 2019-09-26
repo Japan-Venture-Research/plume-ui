@@ -36,8 +36,8 @@ $column-gap: 0.75rem;
     }
   }
 
-  &.from-middle {
-    @include mq(middle) {
+  &.from-medium {
+    @include mq(medium) {
       display: flex;
 
       @for $i from 0 through 12 {

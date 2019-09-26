@@ -1,16 +1,16 @@
-$sizes: small, middle, middle-only, large extra-large;
+$sizes: small, medium, medium-only, large, large-only, extra-large, until-medium, until-large;
 
 @mixin mq($size) {
   @if $size == small {
-    @media (max-width: $middle - 1) {
+    @media (max-width: $medium - 1) {
       @content;
     }
-  } @else if $size == middle {
-    @media (min-width: $middle) {
+  } @else if $size == medium {
+    @media (min-width: $medium) {
       @content;
     }
-  } @else if $size == middle-only {
-    @media (min-width: $middle) and (max-width: $large - 1) {
+  } @else if $size == medium-only {
+    @media (min-width: $medium) and (max-width: $large - 1) {
       @content;
     }
   } @else if $size == large {
@@ -25,7 +25,7 @@ $sizes: small, middle, middle-only, large extra-large;
     @media (min-width: $extra-large) {
       @content;
     }
-  } @else if $size == until-middle {
+  } @else if $size == until-medium {
     @media (max-width: $large - 1) {
       @content;
     }
