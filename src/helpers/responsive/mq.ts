@@ -21,5 +21,7 @@ export const mq = {
   middleOnly: between(breakpoint.middle, breakpoint.large - 1),
   large: min(breakpoint.large),
   largeOnly: between(breakpoint.large, breakpoint.extraLarge - 1),
-  extraLarge: min(breakpoint.extraLarge)
+  extraLarge: min(breakpoint.extraLarge),
+  untilMiddle: max(breakpoint.large - 1),
+  untilLarge: max(breakpoint.extraLarge - 1)
 }
