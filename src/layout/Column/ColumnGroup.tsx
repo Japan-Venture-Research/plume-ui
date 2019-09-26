@@ -7,7 +7,7 @@ type Available = typeof defaultTag | 'span' | 'ul'
 
 export type ColumnGroupProps<T extends Available = typeof defaultTag> = {
   gapSize?: 'none' | 'small' | 'medium' | 'large'
-  from?: 'small' | 'middle'
+  from?: 'small' | 'medium'
 } & BaseProps<T>
 
 export const ColumnGroup = <T extends Available>({
@@ -25,7 +25,7 @@ export const ColumnGroup = <T extends Available>({
         'pl-column-group',
         gapSizeClass,
         { 'from-small': from === 'small' },
-        { 'from-middle': from === 'middle' },
+        { 'from-medium': from === 'medium' },
         className
       )}
       {...props}
