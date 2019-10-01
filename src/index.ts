@@ -19,6 +19,11 @@ export {
   CardContentProps,
   CardImageProps,
 } from './components/Card/Card'
+export {
+  Pagination,
+  PaginationProps,
+  PaginationListProps,
+} from './components/Pagination/Pagination'
 
 // Layout
 export { Column, ColumnProps, ColumnGroupProps } from './layout/Column/Column'
