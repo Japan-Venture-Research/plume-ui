@@ -1,3 +1,5 @@
+import 'remixicon/fonts/remixicon.css'
+
 // Styles
 export { colors } from './styles/colors'
 export { breakpoint, Breakpoint } from './styles/breakpoint'
@@ -17,6 +19,15 @@ export {
   CardContentProps,
   CardImageProps,
 } from './components/Card/Card'
+export {
+  Pagination,
+  PaginationProps,
+  PaginationListProps,
+  PaginationItemProps,
+  PaginationEllipsisProps,
+  PaginationPreviousProps,
+  PaginationNextProps,
+} from './components/Pagination/Pagination'
 
 // Layout
 export { Column, ColumnProps, ColumnGroupProps } from './layout/Column/Column'
