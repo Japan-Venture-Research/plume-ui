@@ -26,7 +26,7 @@ export {
   PaginationItemProps,
   PaginationEllipsisProps,
   PaginationPreviousProps,
-  PaginationNextProps
+  PaginationNextProps,
 } from './components/Pagination/Pagination'
 
 // Layout
