@@ -6,7 +6,7 @@ const defaultTag = 'a'
 type Available = typeof defaultTag | 'span' | 'div'
 
 export type PaginationPreviousProps<T extends Available = typeof defaultTag> = {
-    disabled?: boolean
+  disabled?: boolean
 } & BaseProps<T>
 
 export const PaginationPrevious = <T extends Available>({
@@ -18,7 +18,7 @@ export const PaginationPrevious = <T extends Available>({
       as={props.as || defaultTag}
       className={classNames(
         'pl-pagination-previous',
-        { 'is-disabled': props.disabled},
+        { 'is-disabled': props.disabled },
         className
       )}
       {...props}

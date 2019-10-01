@@ -5,8 +5,9 @@ import { Base, BaseProps } from '../../internal/Base'
 const defaultTag = 'span'
 type Available = typeof defaultTag | 'li'
 
-export type PaginationEllipsisProps<T extends Available = typeof defaultTag> = {
-} & BaseProps<T>
+export type PaginationEllipsisProps<
+  T extends Available = typeof defaultTag
+> = {} & BaseProps<T>
 
 export const PaginationEllipsis = <T extends Available>({
   className,
@@ -15,13 +16,10 @@ export const PaginationEllipsis = <T extends Available>({
   return (
     <Base
       as={props.as || defaultTag}
-      className={classNames(
-        'pl-pagination-ellipsis',
-        className
-      )}
+      className={classNames('pl-pagination-ellipsis', className)}
       {...props}
     >
-        &hellip;
+      &hellip;
     </Base>
   )
 }

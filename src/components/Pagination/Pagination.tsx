@@ -9,9 +9,9 @@ import { PaginationNext } from './PaginationNext'
 
 export { PaginationListProps } from './PaginationList'
 export { PaginationItemProps } from './PaginationItem'
-export {PaginationEllipsisProps} from './PaginationEllipsis'
-export {PaginationPreviousProps} from './PaginationPrevious'
-export {PaginationNextProps} from './PaginationNext'
+export { PaginationEllipsisProps } from './PaginationEllipsis'
+export { PaginationPreviousProps } from './PaginationPrevious'
+export { PaginationNextProps } from './PaginationNext'
 
 const defaultTag = 'div'
 type Available = typeof defaultTag | 'span'

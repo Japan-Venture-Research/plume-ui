@@ -18,7 +18,7 @@ export const PaginationNext = <T extends Available>({
       as={props.as || defaultTag}
       className={classNames(
         'pl-pagination-next',
-        { 'is-disabled': props.disabled},
+        { 'is-disabled': props.disabled },
         className
       )}
       {...props}
