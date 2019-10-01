@@ -23,6 +23,10 @@ export {
   Pagination,
   PaginationProps,
   PaginationListProps,
+  PaginationItemProps,
+  PaginationEllipsisProps,
+  PaginationPreviousProps,
+  PaginationNextProps
 } from './components/Pagination/Pagination'
 
 // Layout
