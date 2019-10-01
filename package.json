@@ -9,7 +9,8 @@
   "repository": "https://github.com/Japan-Venture-Research/plume-ui",
   "license": "MIT",
   "dependencies": {
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "remixicon": "^2.0.0"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.3.3",

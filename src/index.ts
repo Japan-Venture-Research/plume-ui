@@ -1,3 +1,6 @@
+
+import 'remixicon/fonts/remixicon.css'
+
 // Styles
 export { colors } from './styles/colors'
 export { breakpoint, Breakpoint } from './styles/breakpoint'
