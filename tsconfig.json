@@ -5,7 +5,7 @@
     "jsx": "react",
     "lib": ["dom", "es2016"],
     "moduleResolution": "node",
-    "module": "commonjs",
+    "module": "esnext",
     "declaration": true,
     "sourceMap": true,
     "noUnusedLocals": true,
