@@ -9,8 +9,7 @@
   "repository": "https://github.com/Japan-Venture-Research/plume-ui",
   "license": "MIT",
   "dependencies": {
-    "classnames": "^2.2.6",
-    "remixicon": "^2.0.0"
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.3.3",
@@ -43,7 +42,8 @@
   },
   "peerDependencies": {
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "remixicon": "^2.0.0"
   },
   "scripts": {
     "prepublishOnly": "run-s clean lint build",
