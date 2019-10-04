@@ -7,6 +7,7 @@ export { globalFont, displayFont } from './styles/font'
 
 // Components
 export { Tag, TagProps, TagGroupProps } from './components/Tag/Tag'
+export { Tab, TabProps, TabGroupProps } from './components/Tab/Tab'
 export {
   Button,
   ButtonProps,
