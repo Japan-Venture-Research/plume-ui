@@ -14,14 +14,18 @@ export type TabProps<T extends Available = typeof defaultTag> = {
 export { TabGroupProps } from './TabGroup'
 
 export const Tab = Object.assign(
-  <T extends Available>({ className, ...props }: TabProps<T>) => {
+  <T extends Available>({
+    className,
+    active = false,
+    ...props
+  }: TabProps<T>) => {
     return (
       <Base
         as={props.as || defaultTag}
         className={classNames(
           'pl-tab',
           {
-            'is-active': props.active,
+            'is-active': active,
           },
           className
         )}
