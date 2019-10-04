@@ -10,12 +10,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: install
-        uses: actions/npm@master
-        with:
-          args: install
-      - name: lint / test
+      - name: install / lint / test
         run: |
+          npm ci
           npm run lint
           npm run test:type
           npm run test
