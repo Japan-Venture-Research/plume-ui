@@ -1,7 +1,7 @@
 {
   "name": "plume-ui",
   "description": "plume ui framework",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "author": "plume-ui team",
   "main": "dist/index.js",
   "style": "dist/index.css",
