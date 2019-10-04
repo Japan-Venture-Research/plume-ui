@@ -1,4 +1,3 @@
-import 'remixicon/fonts/remixicon.css'
 import './main.scss'
 
 // Styles
