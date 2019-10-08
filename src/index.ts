@@ -29,6 +29,13 @@ export {
   PaginationPreviousProps,
   PaginationNextProps,
 } from './components/Pagination/Pagination'
+export {
+  CompanyLogo,
+  CompanyLogoFrame,
+  CompanyLogoImage,
+  CompanyLogoFrameProps,
+  CompanyLogoImageProps,
+} from './components/CompanyLogo/CompanyLogo'
 
 // Layout
 export { Column, ColumnProps, ColumnGroupProps } from './layout/Column/Column'
