@@ -2,8 +2,10 @@ name: Release
 
 on:
   push:
+    branches:
+      - release
     tags:
-      - '*'
+      - '!*'
 
 jobs:
   release:
@@ -15,10 +17,16 @@ jobs:
         with:
           node-version: 10.x
           registry-url: 'https://registry.npmjs.org'
-      - name: install and build
-        run: |
-          npm ci
-          npm run build
+      - name: install
+        run: npm ci
+      - name: check version and add tag
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          REPO: ${{github.repository}}
+          COMMIT: ${{github.sha}}
+        run: ./scripts/release.sh
+      - name: build
+        run: npm run build
       - name: publish
         run: npm publish
         env:
