@@ -6,25 +6,20 @@ const defaultTag = 'div'
 type Available = typeof defaultTag | 'span'
 
 export type CompanyLogoFrameProps<T extends Available = typeof defaultTag> = {
-  size?: 'medium' | 'large'
+  size?: 'normal' | 'medium' | 'large'
   children: JSX.Element
 } & BaseProps<T>
 
 export const CompanyLogoFrame = <T extends Available>({
-  size,
+  className,
   ...props
 }: CompanyLogoFrameProps<T>) => {
+  const size = `is-${props.size || 'normal'}`
+
   return (
     <Base
       as={props.as || defaultTag}
-      className={classNames(
-        `pl-company-logo-frame`,
-        {
-          'is-medium': size === 'medium',
-          'is-large': size === 'large',
-        },
-        props.className
-      )}
+      className={classNames(`pl-company-logo-frame`, size, className)}
       {...props}
     />
   )
