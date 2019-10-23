@@ -17,6 +17,8 @@ const baseColors = {
   cyan10: '#f0f6f8',
   cyan40: '#a4dae6',
   cyan50: '#84cad9',
+  cyan60: '#02B3C8',
+  cyan70: '#0fa3b3',
   blueGray20: '#e7eeef',
   blueGray30: '#d2d6db',
   blueGray40: '#b5bbc4',
@@ -29,6 +31,7 @@ const baseColors = {
   hatena: '#00a4de',
   pocket: '#ef4056',
   newspicks: '#222',
+  wantedly: '#00aed1',
 }
 
 // Graduation
