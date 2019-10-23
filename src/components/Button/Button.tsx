@@ -5,21 +5,21 @@ import { ButtonGroup } from './ButtonGroup'
 
 export { ButtonGroupProps } from './ButtonGroup'
 
-const defaultTag = 'span'
-type Available = typeof defaultTag | 'span'
+const defaultTag = 'button'
+type Available = typeof defaultTag | 'span' | 'div'
 
 export type ButtonProps<T extends Available = typeof defaultTag> = {
   color?: 'light' | 'black' | 'white'
-  size?: 'small' | 'normal' | 'medium' | 'large'
+  size?: 'small' | 'normal' | 'large'
   outlined?: boolean
-  rounded?: boolean
+  round?: boolean
   disabled?: boolean
   fullwidth?: boolean
 } & BaseProps<T>
 
 export const Button = Object.assign(
   <T extends Available>({
-    rounded = false,
+    round = false,
     disabled = false,
     outlined = false,
     fullwidth = false,
@@ -37,7 +37,7 @@ export const Button = Object.assign(
           colorName,
           size,
           { 'is-outlined': outlined },
-          { 'is-rounded': rounded },
+          { 'is-round': round },
           { 'is-fullwidth': fullwidth },
           className
         )}
