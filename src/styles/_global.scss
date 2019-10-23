@@ -4,10 +4,13 @@ html {
   font-family: $global-font !important;
 }
 
+:root {
+  font-size: 15px;
+}
+
 body {
   color: $text;
   letter-spacing: $base-letter-spacing;
-  font-size: 15px;
 }
 
 h1,
