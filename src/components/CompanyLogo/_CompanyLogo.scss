@@ -7,19 +7,32 @@
   align-items: center;
   justify-content: center;
 
-  &.is-normal {
-    width: 60px;
-    height: 60px;
+  &.is-extra-small {
+    width: 32px;
+    height: 32px;
   }
 
-  &.is-medium {
-    width: 78px;
-    height: 78px;
+  &.is-small {
+    width: 48px;
+    height: 48px;
   }
+
+  &.is-normal {
+    width: 64px;
+    height: 64px;
+  }
+  // default size
+  width: 64px;
+  height: 64px;
 
   &.is-large {
-    width: 110px;
-    height: 110px;
+    width: 96px;
+    height: 96px;
+  }
+
+  &.is-extra-large {
+    width: 160px;
+    height: 160px;
     padding: 5px;
   }
 }

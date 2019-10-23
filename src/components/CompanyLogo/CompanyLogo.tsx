@@ -5,8 +5,15 @@ import { CompanyLogoImage } from './CompanyLogoImage'
 export { CompanyLogoFrame, CompanyLogoFrameProps } from './CompanyLogoFrame'
 export { CompanyLogoImage, CompanyLogoImageProps } from './CompanyLogoImage'
 
+export type CompanyLogoSize =
+  | 'extra-small'
+  | 'small'
+  | 'normal'
+  | 'medium'
+  | 'large'
+
 type Props = {
-  size?: 'normal' | 'medium' | 'large'
+  size?: 'extra-small' | 'small' | 'normal' | 'medium' | 'large'
   name: string
   src: string
   className?: string

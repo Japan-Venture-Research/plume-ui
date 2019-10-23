@@ -1,14 +1,12 @@
 .pl-button {
-  background-color: $white00;
-  border: 1px solid $gray80;
+  border: 1px solid $black10;
   border-radius: 2px;
-  padding: 0.5em 0.75em;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: bold;
   transition: 0.3s;
-  color: $black10;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   &[disabled] {
     opacity: 0.5;
@@ -20,11 +18,20 @@
     width: 100%;
   }
 
+  // Outline
+  &.is-outlined {
+    border-style: solid;
+    border-width: 2px;
+  }
+
   // Colors
   &.is-white {
-    border-color: $white00;
+    color: $black10;
+    border-color: $gray50;
+    background-color: $white00;
 
     &:hover {
+      color: $black10;
       background-color: $white10;
     }
 
@@ -34,10 +41,12 @@
   }
 
   &.is-light {
+    color: $black10;
     border-color: $gray50;
     background-color: $gray50;
 
     &:hover {
+      color: $black10;
       border-color: $gray60;
       background-color: $gray60;
     }
@@ -69,27 +78,50 @@
 
       &:hover {
         color: $white00;
-        background-color: $black10;
+        background-color: $black30;
       }
+    }
+  }
+  // default color
+  color: $white00;
+  border-color: $black10;
+  background-color: $black10;
+  &:hover {
+    color: $white00;
+    background-color: $black30;
+  }
+
+  &.is-outlined {
+    color: $black10;
+    background-color: transparent;
+
+    &:hover {
+      color: $white00;
+      background-color: $black10;
     }
   }
 
   // Size
   &.is-small {
-    font-size: 0.75rem;
-  }
-  &.is-normal {
-    font-size: 1rem;
-  }
-  &.is-medium {
-    font-size: 1.25rem;
-  }
-  &.is-large {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
+    padding: 7.5px 19px 7.5px;
   }
 
-  // Rounded
-  &.is-rounded {
-    border-radius: 20px;
+  &.is-normal {
+    font-size: 0.95rem;
+    padding: 12px 29px;
+  }
+  // default size
+  font-size: 0.95rem;
+  padding: 12px 29px;
+
+  &.is-large {
+    font-size: 1.05rem;
+    padding: 17px 21px;
+  }
+
+  // Round
+  &.is-round {
+    border-radius: $radius-round;
   }
 }

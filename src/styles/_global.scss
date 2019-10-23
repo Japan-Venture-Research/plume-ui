@@ -1,13 +1,10 @@
 $base-letter-spacing: 0.018em !default;
 
-html {
+:root {
+  font-size: 15px;
   font-family: $global-font !important;
-}
-
-body {
   color: $text;
   letter-spacing: $base-letter-spacing;
-  font-size: 15px;
 }
 
 h1,
