@@ -9,11 +9,11 @@ export type CompanyLogoSize =
   | 'extra-small'
   | 'small'
   | 'normal'
-  | 'medium'
   | 'large'
+  | 'extra-large'
 
 type Props = {
-  size?: 'extra-small' | 'small' | 'normal' | 'medium' | 'large'
+  size?: CompanyLogoSize
   name: string
   src: string
   className?: string
