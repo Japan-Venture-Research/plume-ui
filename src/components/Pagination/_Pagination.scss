@@ -6,9 +6,27 @@ $prev-next-size: 72px;
   align-items: center;
 }
 
+.pl-pagination-item,
 .pl-pagination-previous,
 .pl-pagination-next {
-  background-color: $gray40;
+  @include mq(small) {
+    height: 35px;
+    width: 35px;
+  }
+
+  &:hover,
+  a:hover {
+    text-decoration: none;
+
+    &.is-disabled {
+      cursor: default;
+    }
+  }
+}
+
+.pl-pagination-previous,
+.pl-pagination-next {
+  background-color: $gray30;
   height: $item-size;
   width: $prev-next-size;
   display: flex;
@@ -35,6 +53,7 @@ $prev-next-size: 72px;
 
   padding-left: 5px;
   padding-right: 5px;
+  margin: 0;
 }
 
 .pl-pagination-item {
