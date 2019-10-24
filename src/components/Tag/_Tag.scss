@@ -15,7 +15,8 @@
 
     &:hover,
     &:focus {
-      background-color: $blue-gray30;
+      border-color: $blue-gray50;
+      background-color: $blue-gray50;
       color: $white00;
     }
 
