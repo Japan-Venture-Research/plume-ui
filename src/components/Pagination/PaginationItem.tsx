@@ -11,6 +11,7 @@ export type PaginationItemProps<T extends Available = typeof defaultTag> = {
 
 export const PaginationItem = <T extends Available>({
   className,
+  active,
   ...props
 }: PaginationItemProps<T>) => {
   return (
@@ -18,7 +19,7 @@ export const PaginationItem = <T extends Available>({
       as={props.as || defaultTag}
       className={classNames(
         'pl-pagination-item',
-        { 'is-active': props.active },
+        { 'is-active': active },
         className
       )}
       {...props}
