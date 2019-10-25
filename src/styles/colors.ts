@@ -36,10 +36,11 @@ const baseColors = {
 
 // Graduation
 const gradColors = {
-  gradBlack: `linear-gradient(225deg, ${baseColors.black20} 0%, ${baseColors.black30} 62%, ${baseColors.black10} 100%)`,
-  gradDeepGreen: `linear-gradient(225deg, #3ba395 0%, #21789a 100%)`,
-  gradOrangePink: `linear-gradient(225deg, #d754ad 0%, #f96785 59%, #fe7333 100%)`,
-  gradSilver: `linear-gradient(225deg, #e6e9ed 0%, #eef1f6 50%, #d1d8dc 100%)`,
+  gradBlack: 'linear-gradient(225deg, #2a2a2a 0%, #333 62%, #161616 100%)',
+  gradDeepGreen: 'linear-gradient(225deg, #3ba395 0%, #21789a 100%)',
+  gradOrangePink:
+    'linear-gradient(225deg, #d754ad 0%, #f96785 59%, #fe7333 100%)',
+  gradSilver: 'linear-gradient(225deg, #e6e9ed 0%, #eef1f6 50%, #d1d8dc 100%)',
 }
 
 const aliasColors = {
