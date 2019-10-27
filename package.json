@@ -9,7 +9,8 @@
   "repository": "https://github.com/Japan-Venture-Research/plume-ui",
   "license": "MIT",
   "dependencies": {
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "core-js": "^3.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",

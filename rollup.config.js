@@ -27,7 +27,7 @@ export default {
     commonjs(),
     babel({
       exclude: 'node_modules/**',
-      presets: [['@babel/preset-env', { useBuiltIns: 'usage' }]],
+      presets: [['@babel/preset-env', { useBuiltIns: 'usage', corejs: 3 }]],
       extensions: ['.tsx', '.ts'],
     }),
   ],
