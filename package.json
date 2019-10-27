@@ -1,7 +1,7 @@
 {
   "name": "plume-ui",
   "description": "plume ui framework",
-  "version": "0.0.53",
+  "version": "0.0.54",
   "author": "plume-ui team",
   "main": "dist/index.js",
   "style": "dist/index.css",
@@ -14,7 +14,6 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
-    "@babel/preset-typescript": "^7.3.3",
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
     "@types/classnames": "^2.2.9",
