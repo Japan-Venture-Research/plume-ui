@@ -5,7 +5,7 @@ import { TagGroup } from './TagGroup'
 
 export { TagGroupProps } from './TagGroup'
 
-type TagColor = 'light' | 'transparent'
+type TagColor = 'light' | 'transparent' | 'red'
 
 const defaultTag = 'span'
 type Available = typeof defaultTag | 'a'
