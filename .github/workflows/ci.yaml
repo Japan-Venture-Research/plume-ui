@@ -10,9 +10,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: install / lint / test
+      - name: save/restore node_modules to/from cache
+        uses: actions/cache@preview
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node
+      - name: install dependencies
         run: |
           npm ci
+        if: steps.cache.outputs.cache-hit != 'true'
+      - name: lint / typecheck / test
+        run: |
           npm run lint
           npm run test:type
           npm run test
