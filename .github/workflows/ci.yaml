@@ -10,7 +10,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: save/restore node_modules to/from cache
+      - name: restore node_modules to/from cache
         uses: actions/cache@preview
         with:
           path: node_modules
