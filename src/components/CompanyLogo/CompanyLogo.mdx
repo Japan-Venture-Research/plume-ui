@@ -1,0 +1,76 @@
+---
+name: CompanyLogo
+menu: Components
+route: /company-logo
+---
+
+import { Playground } from 'docz'
+import { CompanyLogo } from "./CompanyLogo"
+import { InlineBox } from '../../doc-components/InlineBox'
+
+import img from '../../../public/logo.png'
+
+# CompanyLogo
+
+企業ロゴに利用するコンポーネントです。
+
+## CSS
+
+<Playground>
+  <InlineBox>
+    <div className='pl-company-logo-frame is-extra-small'>
+      <img src={img} className='pl-company-logo-image' />
+    </div>
+  </InlineBox>
+  <InlineBox>
+    <div className='pl-company-logo-frame is-small'>
+      <img src={img} className='pl-company-logo-image' />
+    </div>
+  </InlineBox>
+  <InlineBox>
+    <div className='pl-company-logo-frame'>
+      <img src={img} className='pl-company-logo-image' />
+    </div>
+  </InlineBox>
+  <InlineBox>
+    <div className='pl-company-logo-frame is-large'>
+      <img src={img} className='pl-company-logo-image' />
+    </div>
+  </InlineBox>
+  <InlineBox>
+    <div className='pl-company-logo-frame is-extra-large'>
+      <img src={img} className='pl-company-logo-image' />
+    </div>
+  </InlineBox>
+</Playground>
+
+## React
+
+`size`propsでサイズを指定します。
+
+<Playground>
+  <InlineBox>
+    <CompanyLogo name='extra-small' src={img} size='extra-small' />
+  </InlineBox>
+    <InlineBox>
+    <CompanyLogo name='small' src={img} size='small' />
+  </InlineBox>
+  <InlineBox>
+    <CompanyLogo name='normal' src={img} size='normal' />
+  </InlineBox>
+  <InlineBox>
+    <CompanyLogo name='large' src={img} size='large' />
+  </InlineBox>
+    <InlineBox>
+    <CompanyLogo name='extra-large' src={img} size='extra-large' />
+  </InlineBox>
+</Playground>
+
+`CompanyLogo`コンポーネントは外縁の`CompanyLogo.Frame`と`CompanyLogo.Image`から構成されていて、それぞれを別個に利用できます。
+例えばフレームの内側にテキストを表示することができます:
+
+<Playground>
+  <CompanyLogo.Frame size='large'>
+    <a>全て見る</a>
+  </CompanyLogo.Frame>
+</Playground>

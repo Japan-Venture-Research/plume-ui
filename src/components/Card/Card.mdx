@@ -1,0 +1,40 @@
+---
+name: Card
+menu: Components
+route: /card
+---
+
+import { Playground } from "docz"
+import { Card } from "./Card"
+
+# Card
+
+記事へのリンクなど、様々なコンテンツのために使うコンポーネントです。
+
+## CSS
+
+`pl-card`クラスを使います。
+
+<Playground style={{backgroundColor: '#999', padding: '50px', textAlight: 'center'}}>
+  <div className="pl-card">
+    <div className="pl-card-image">
+        <figure className='image'>
+            <img src='http://placehold.jp/1280x960.png' />
+        </figure>
+    </div>
+    <div className="pl-card-content">
+        ARが普及した世界では、人は何に価値を見出すだろう？
+    </div>
+  </div>
+</Playground>
+
+## React
+
+<Playground style={{backgroundColor: '#999', padding: '50px', textAlight: 'center'}}>
+  <Card>
+    <Card.Image src='http://placehold.jp/1280x960.png' />
+    <Card.Content>
+        ARが普及した世界では、人は何に価値を見出すだろう？
+    </Card.Content>
+  </Card>
+</Playground>
