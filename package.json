@@ -22,6 +22,7 @@
     "@types/react": "^16.9.1",
     "@types/react-dom": "^16.8.5",
     "autoprefixer": "^9.6.1",
+    "concurrently": "^5.0.0",
     "css-loader": "^3.2.0",
     "docz": "^1.2.0",
     "docz-theme-default": "^1.2.0",
@@ -58,7 +59,6 @@
     "remixicon": "^2.0.0"
   },
   "scripts": {
-    "prepublishOnly": "run-s clean lint build",
     "build": "rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js --watch",
     "copy:sass": "cd src && find . -name '*.scss' | cpio -pdm ../plume-sass && cd -",
@@ -68,9 +68,11 @@
     "test": "jest",
     "test:type": "tsc --noEmit",
     "fmt": "prettier --write '**/*{ts,tsx}'",
+    "prepublishOnly": "run-s clean lint build",
     "docs": "docz dev",
     "docs:build": "docz build",
     "docs:typecheck": "node scripts/typecheck.js",
-    "now-build": "yarn docs:build"
+    "now-build": "yarn docs:build",
+    "dev": "concurrently \"npm run start\" \"npm run docs\""
   }
 }

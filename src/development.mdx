@@ -11,16 +11,26 @@ plume-uiを開発するときに知っておきたい、コマンドや設計の
 
 主要なコマンドです。他のものはnpm scriptsを確認してください。
 
+## 開発
+
+以下のコマンドでwatch buildとドキュメントのサーバーを同時に起動します
+
+```
+$ npm run dev
+```
+
 ### ビルド
 
-```
-$ yarn build 
-```
-
-### フォーマット
+以下のコマンドで変更をwatchしながらビルドします
 
 ```
-$ yarn fmt
+$ npm start
+```
+
+以下のコマンドで単純にビルドします
+
+```
+$ npm run build 
 ```
 
 ## ドキュメント
@@ -30,6 +40,16 @@ $ yarn fmt
 `mdx`というファイル形式で、markdownの中にJSXをimportしてコンポーネントを描画することができます。
 
 少しクセのあるツールですが、人に向けたドキュメントと、リビングドキュメントとしてのコンポーネントを一つのページ内に書けて強力です。VSCodeならmdxを編集するための[プラグイン](https://github.com/silvenon/vscode-mdx)があります。
+
+## リリース
+
+package.jsonの `version` を更新してmasterブランチにpushするとGithub Actionで自動的にpublishされます。
+
+### フォーマット
+
+```
+$ yarn fmt
+```
 
 ## 構成
 
@@ -55,14 +75,15 @@ $ yarn fmt
 ```
 
 
-コンポーネントディレクトリ以下には、コンポーネントの`tsx`ファイル、スタイルの`scss`を配置します。
+コンポーネントディレクトリ以下には、コンポーネントの`tsx`ファイル、スタイルの`scss`ファイル、ドキュメントの`mdx`ファイルを配置します。
 
 ```
 ❯ tree -L 2 ./src/components
 ./src/components
 └── Tag
-    ├── Tag.scss
+    ├── _Tag.scss
     └── Tag.tsx
+    └── Tag.mdx
 ```
 
 ## 設計方針
