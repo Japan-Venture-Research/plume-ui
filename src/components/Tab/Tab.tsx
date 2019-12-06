@@ -36,7 +36,7 @@ export const Tab = Object.assign(
       >
         {props.children}
         <>
-          {count && count > 0 && (
+          {count !== undefined && count > 0 && (
             <span className="pl-tab-count">{formatWithComma(count)}</span>
           )}
         </>

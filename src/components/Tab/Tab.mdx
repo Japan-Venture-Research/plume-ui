@@ -16,7 +16,8 @@ import { Tab } from "./Tab"
 
 `pl-tab-group`で`pl-tab`のリストを囲みます。
 `is-active`クラスで現在表示されているコンテンツを示します。
-タブに数値を表示する場合は`count`propsに指定します。
+
+タブに数値を表示する場合は`pl-tab-count`クラスを使います。
 
 <Playground>
   <div className="pl-tab-group">
@@ -47,11 +48,14 @@ import { Tab } from "./Tab"
   <Tab.Group>
     <Tab as="a" href="#">企業概要</Tab>
     <Tab as="a" href="#">ストーリー</Tab>
-    <Tab as="a" href="#" count={87}>
+    <Tab as="a" href="#" count={0}>
       投資先
     </Tab>
     <Tab as="a" href="#" count={1023} active>
       スタートアップ投資
+    </Tab>
+    <Tab as="a" href="#" count={0}>
+      LP投資
     </Tab>
   </Tab.Group>
 </Playground>
