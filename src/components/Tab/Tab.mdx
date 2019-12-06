@@ -16,12 +16,24 @@ import { Tab } from "./Tab"
 
 `pl-tab-group`で`pl-tab`のリストを囲みます。
 `is-active`クラスで現在表示されているコンテンツを示します。
+タブに数値を表示する場合は`count`propsに指定します。
 
 <Playground>
   <div className="pl-tab-group">
     <a className="pl-tab is-active" href="#">企業概要</a>
     <a className="pl-tab" href="#">ストーリー</a>
-    <a className="pl-tab" href="#">投資先</a>
+    <a className="pl-tab" href="#">
+      投資先
+      <span className="pl-tab-count">
+        87
+      </span>
+    </a>
+    <a className="pl-tab" href="#">
+      スタートアップ投資
+      <span className="pl-tab-count">
+        1,023
+      </span>
+    </a>
   </div>
 </Playground>
 
@@ -29,11 +41,17 @@ import { Tab } from "./Tab"
 
 `Tab.Group`で`Tab`コンポーネントのリストを囲みます。
 `active`propsで現在表示されているコンテンツを指定します。
+タブに数値を表示する場合は`count`propsに指定します。
 
 <Playground>
   <Tab.Group>
     <Tab as="a" href="#">企業概要</Tab>
-    <Tab as="a" href="#" active>ストーリー</Tab>
-    <Tab as="a" href="#">投資先</Tab>
+    <Tab as="a" href="#">ストーリー</Tab>
+    <Tab as="a" href="#" count={87}>
+      投資先
+    </Tab>
+    <Tab as="a" href="#" count={1023} active>
+      スタートアップ投資
+    </Tab>
   </Tab.Group>
 </Playground>
