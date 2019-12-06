@@ -1,3 +1,3 @@
 # plume-ui
 
-[document](http://plume-ui.initial-inc.now.sh/)
+[doc](http://plume-ui.initial-inc.now.sh/)
