@@ -6,7 +6,7 @@
 }
 
 .pl-tab {
-  color: $gray80;
+  color: $black30;
   font-size: 1rem;
   padding: 0.5rem 1rem 0.4rem;
   margin-left: 0.3rem;
@@ -14,6 +14,8 @@
   border-bottom: 3px solid $white00 !important;
   box-shadow: none !important;
   line-height: 1.8;
+  display: flex;
+  align-items: center;
 
   &:hover,
   &:active {
@@ -35,4 +37,11 @@
     color: $text-strong !important;
     border-bottom: 3px solid $text-strong !important;
   }
+}
+
+.pl-tab-count {
+  margin-left: 8px;
+  margin-right: -4px;
+  font-size: 15px;
+  color: $gray80;
 }
