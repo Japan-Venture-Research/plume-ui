@@ -1,0 +1,26 @@
+---
+name: Colors
+menu: Styles
+route: /colors
+---
+
+import { colors } from './colors'
+import { ColorSwatch } from '../doc-components/ColorSwatch'
+
+# Colors
+
+主要な色です。
+
+色はSassの変数([source](https://github.com/Japan-Venture-Research/plume-ui/blob/master/src/styles/_colors.scss))とJavaScriptの変数([source](https://github.com/Japan-Venture-Research/plume-ui/blob/master/src/styles/colors.ts))としてそれぞれexportされています。
+
+<React.Fragment>
+  {Object.entries(colors).map(([name, code], i) => {
+    console.log(`${name}: ${JSON.stringify(code)}`)
+    // Skip
+    if (name === '__filemeta') {
+      return
+    }
+    return <ColorSwatch name={name} code={code} key={i} />
+  })}
+</React.Fragment>
+

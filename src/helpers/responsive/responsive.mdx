@@ -1,0 +1,94 @@
+---
+name: Responsive
+menu: Helpers
+route: /responsive
+---
+
+import { Playground } from "docz"
+import { Small, Medium, MediumOnly, Large, LargeOnly, ExtraLarge, UntilMedium, UntilLarge } from '../../doc-components/responsive'
+
+# Responsive
+
+## ブレークポイント
+
+plume-uiにはブレークポイントが3つあります。
+
+- `small`: `419px`より小さい幅
+- `medium`: `420px`より大きい幅
+- `large`: `770px`より大きい幅
+- `extra large`: `1120px`より大きい幅
+
+加えて、下の表ように`mediumOnly`や`untilMedium`としてヘルパー関数やコンポーネントのプロパティを用意しています。
+
+## 表
+
+||419pxまで|420pxから769pxまで|770pxから|1120pxから|
+|:-|:-|:-|:-|:-|
+|small|✅||||
+|medium only||✅|||
+|medium||✅|✅|✅|
+|large|||✅|✅|
+|large only|||✅||
+|extra large||||✅|
+|until medium|✅|✅|||
+|until large|✅|✅|✅||
+
+## CSS
+
+**TODO** CSSについても詳細は書いていませんが、下記のJSのヘルパーと同じようなヘルパーをSassのヘルパーとして定義しています
+
+## React
+
+### `mq` ヘルパー
+
+plume-uiではレスポンシブ対応に必要なメディアクエリを生成するための汎用的な関数として`mq`ヘルパーを用意しています。
+
+media queryは煩雑になってしまったり、書き方がまちまちになってしまうことがありますが、それを防ぎ統一されたわかりやすい書き方を保つためです。
+
+以下のAPIで、上記のplume-uiで定義したブレークポイントに対応するメディアクエリを返します。
+
+- `mq.small`: `@media (max-width: 419px)`
+- `mq.medium`: `@media (min-width: 420px)`
+- `mq.mediumOnly`: `@media (min-width: 420px) and (max-width: 769px)`
+- `mq.large`: `@media (min-width: 770px)`
+- `mq.largeOnly`: `@media (min-width: 770px) and (max-width: 1119px)`
+- `mq.extraLarge`: `@media (min-width: 1120px)`
+- `mq.untilMedium`: `@media (max-width: 769px)`
+- `mq.untilLarge`: `@media (max-width: 1119px)`
+
+また、上のブレークポイント以外で局所的に使いたい場合に、数値を受け取ってメディアクエリを返すAPIも用意しています。
+
+- `mq.min`: `mq.min(500)` => `@media (min-width: 500px)`
+- `mq.max`: `mq.max(500)` => `@media (max-width: 800px)`
+- `mq.between`: `mq.between(500, 800)` => `@media (min-width: 500px) and (max-width: 800px)`
+
+### Usage
+
+```jsx
+import { mq } from 'plume-ui'
+
+const Link = () => {
+  return (
+    <Tag css={css`
+      ${mq.large} {
+        display: none;
+      }
+    `}>example</Tag>
+  )
+}
+```
+
+### demo
+
+下のプレイグラウンドの`Small`、`Medium`などのコンポーネントはそれぞれ自身のブレークポイント以外では表示されないようにしています。ブラウザの幅を動かして試してみてくだっさい。
+
+<Playground>
+  <Small>small</Small>
+  <Medium>medium</Medium>
+  <MediumOnly>medium only</MediumOnly>
+  <Large>large</Large>
+  <LargeOnly>large only</LargeOnly>
+  <ExtraLarge>extra large</ExtraLarge>
+  <UntilMedium>until medium</UntilMedium>
+  <UntilLarge>until large</UntilLarge>
+</Playground>

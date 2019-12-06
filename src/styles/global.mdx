@@ -1,0 +1,39 @@
+---
+name: Global
+menu: Styles
+route: /global
+---
+
+# Global
+
+font-familyなど、HTML要素に直接スタイルを当てるものには`global.scss`を使います。
+
+更にそのベースとなる、ブラウザデフォルトスタイルのnormalizeには[modern-normalize](https://github.com/sindresorhus/modern-normalize)を使っています。
+
+---
+
+アプリケーション側ではレスポンシブデザインに対応している必要があります。
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+```
+
+また、cdnからRoboto / YakuhanJPフォントを読み込む必要があります。
+
+```html
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+/>
+<link rel="stylesheet" href="https://use.typekit.net/xli4iup.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp_s-narrow.min.css"
+/>
+```
+
+CSSコンポーネントとして読み込む場合は、[remixicon](https://github.com/Remix-Design/remixicon)を読み込む必要があります。
+
+```html
+<link href="https://cdn.remixicon.com/releases/v2.0.0/remixicon.css" rel="stylesheet">
+```

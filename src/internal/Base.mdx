@@ -1,0 +1,35 @@
+---
+name: Base
+menu: Internal
+route: /base
+---
+
+import { Playground } from "docz"
+import { Base } from "./Base"
+import { Tag } from "../../src/components/Tag/Tag"
+
+# Base
+
+plume-uiのコンポーネントを利用するアプリケーションで、コンポーネントを柔軟にコントロールし、拡張するためのベースとなるコンポーネントです
+
+## as
+
+次のように`as`propsにHTMLタグの名前を渡すことで、そのタグとして描画できます。
+
+<Playground>
+  <Base as='a' href='https://example.com' target="_blank">https://example.com</Base>
+</Playground>
+
+この`Base`コンポーネントを拡張して、plume-uiの各コンポーネントを実装することで、次のように本来は`span`として表示される`Tag`コンポーネントをリンクとして表示することができます
+
+<Playground>
+  <Tag as='a' href='https://example.com' target="_blank">example</Tag>
+</Playground>
+
+## スタイル
+
+Baseコンポーネントで`style`や`className`propsを受け入れることで、plume-uiの全てのコンポーネントでも同じようにスタイルを利用側から変更できるようにしています
+
+<Playground>
+  <Base as='a' href='https://example.com' target="_blank" style={{color: 'red'}}>https://example.com</Base>
+</Playground>

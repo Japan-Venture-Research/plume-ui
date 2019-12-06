@@ -1,0 +1,35 @@
+---
+name: Spacing
+menu: Helpers
+route: /spacing
+---
+
+import { Playground } from "docz"
+import { Button } from "../../components/Button/Button"
+import { Column } from "../../layout/Column/Column"
+
+# Spacing
+
+コンポーネント間のスペースを調整するmodifierです。
+
+## CSS
+
+- `.is-marginless`: コンポーネントからmarginを取り除きます
+- `.is-paddingless`: コンポーネントからpaddingを取り除きます
+
+
+<Playground>
+    <div style={{color: '#fff', backgroundColor: '#000', width: '50px', height: '50px', padding: '10px', margin: '10px'}} className='is-marginless is-paddingless'>test</div>
+</Playground>
+
+## React
+
+`marginless`props / `paddingless` propsでそれぞれコンポーネントからmargin / paddingを取り除きます
+
+<Playground>
+    <Column.Group>
+        <Column paddingless marginless style={{margin: '50px'}}>
+              <Button color='black' fullwidth>button1</Button>
+        </Column>
+    </Column.Group>
+</Playground>

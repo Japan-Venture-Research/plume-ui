@@ -20,11 +20,18 @@ export const ColorSwatch: React.FC<Props> = props => {
 
 const Wrapper = styled.span<{ code: string }>`
   display: inline-block;
-  width: ${props => (props.code.startsWith('linear') ? '380px' : '190px')};
+  width: 190px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  margin: ${props =>
-    props.code.startsWith('linear') ? '1rem 1rem' : '1rem 0.5rem'};
+  margin: 1rem 0.5rem;
+
+  ${props =>
+    props.code.startsWith('linear') &&
+    `
+    width: 380px;
+    margin: 1rem 1rem;
+    max-width: 90%;
+  `}
 `
 
 const Color = styled.span<{ code: string }>`
