@@ -22,7 +22,6 @@
     "@types/react": "^16.9.1",
     "@types/react-dom": "^16.8.5",
     "autoprefixer": "^9.6.1",
-    "concurrently": "^5.0.0",
     "css-loader": "^3.2.0",
     "docz": "^1.2.0",
     "docz-theme-default": "^1.2.0",
@@ -72,7 +71,7 @@
     "docs": "docz dev",
     "docs:build": "docz build",
     "docs:typecheck": "node scripts/typecheck.js",
-    "now-build": "yarn docs:build",
-    "dev": "concurrently \"npm run start\" \"npm run docs\""
+    "now-build": "run-s build docs:build",
+    "dev": "run-p start docs"
   }
 }
