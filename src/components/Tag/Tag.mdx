@@ -1,0 +1,132 @@
+---
+name: Tag
+menu: Components
+route: /tag
+---
+
+import { Playground } from "docz"
+import { Tag } from "./Tag"
+import { InlineBox } from "../../doc-components/InlineBox"
+
+# Tag
+
+記事の種類などを表現する際に使うタグです。
+
+## CSS
+
+`pl-tag`クラスを使います。
+
+<Playground>
+  <span className="pl-tag is-light">example</span>
+</Playground>
+
+### Colors
+
+`is-light`, `is-red` `is-transparent`で色を変更できます。
+
+<Playground>
+  <span className="pl-tag is-light">light</span>
+  <span className="pl-tag is-red">red</span>
+  <InlineBox colored>
+    <span className="pl-tag is-transparent">transparent</span>
+  </InlineBox>
+</Playground>
+
+### Square
+
+`is-square`で形状が四角のタグになります（余白のサイズも変わることに注意してください）
+
+<Playground>
+  <span className="pl-tag is-light is-square">light</span>
+</Playground>
+
+### Inverted
+
+`is-inverted`で背景色とテキスト色が逆のタグになります
+
+<Playground>
+  <div>
+    <span className="pl-tag is-light is-square is-inverted">light</span>
+  </div>
+  <div>
+    <span className="pl-tag is-red is-square is-inverted">red</span>
+  </div>
+</Playground>
+
+### Prefix
+
+`has-prefix`で`#`がテキストの前にある場合などのスタイルを調整できます。
+
+<Playground>
+  <span className="pl-tag is-light has-prefix"># example</span>
+</Playground>
+
+### Group
+
+複数タグを並べるのに`pl-tag-group`クラスを使います。
+
+<Playground>
+  <span className="pl-tag-group">
+    <span className="pl-tag is-light has-prefix"># example</span>
+    <span className="pl-tag is-light has-prefix"># example</span>
+    <span className="pl-tag is-light has-prefix"># example</span>
+  </span>
+</Playground>
+
+## React
+
+<Playground>
+  <Tag>example</Tag>
+</Playground>
+
+### Colors
+
+`color` propで色を変更できます。デフォルトは`light`です。
+
+<Playground>
+  <Tag color='light'>light</Tag>
+  <InlineBox colored>
+    <Tag color="transparent">transparent</Tag>
+  </InlineBox>
+</Playground>
+
+### Square
+
+`square`propで形状が四角のタグになります（余白のサイズも変わることに注意してください）
+
+<Playground>
+  <Tag color='light' square>light</Tag>
+</Playground>
+
+### Inverted
+
+`inverted`propsで背景色とテキスト色が逆のタグになります
+
+<Playground>
+  <div>
+    <Tag color='light' square inverted>light</Tag>
+  </div>
+  <div>
+    <Tag color='red' square inverted>red</Tag>
+  </div>
+</Playground>
+
+### Prefix
+
+`prefix` propで`#`をつけるなど、テキストの前に記号などを配置できます。
+
+<Playground>
+  <Tag prefix='#'>example</Tag>
+</Playground>
+
+### Group
+
+複数のタグを並べる場合に使います。
+
+<Playground>
+  <Tag.Group>
+    <Tag prefix='#'>example</Tag>
+    <Tag prefix='#'>example</Tag>
+    <Tag prefix='#'>example</Tag>
+  </Tag.Group>
+</Playground>

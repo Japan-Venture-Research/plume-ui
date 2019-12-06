@@ -25,11 +25,15 @@
     "css-loader": "^3.2.0",
     "docz": "^1.2.0",
     "docz-theme-default": "^1.2.0",
+    "exec-sh": "^0.3.4",
     "jest": "^24.9.0",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.3",
     "prettier": "^1.18.2",
+    "remark-mdx": "^1.5.1",
+    "remark-parse": "^7.0.2",
+    "remark-stringify": "^7.0.4",
     "rimraf": "^3.0.0",
     "rollup": "^1.22.0",
     "rollup-plugin-babel": "^4.3.3",
@@ -41,7 +45,12 @@
     "sass-loader": "^7.2.0",
     "style-loader": "^1.0.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "unified": "^8.4.2",
+    "unified-stream": "^1.0.5",
+    "unist-util-filter": "^2.0.0",
+    "unist-util-find": "^1.0.1",
+    "unist-util-map": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^16.9.0",
@@ -49,7 +58,6 @@
     "remixicon": "^2.0.0"
   },
   "scripts": {
-    "prepublishOnly": "run-s clean lint build",
     "build": "rollup -c rollup.config.js",
     "start": "rollup -c rollup.config.js --watch",
     "copy:sass": "cd src && find . -name '*.scss' | cpio -pdm ../plume-sass && cd -",
@@ -57,6 +65,13 @@
     "lint": "prettier --check 'src/**/*{ts,tsx,scss}'",
     "lint:fix": "prettier --write 'src/**/*{ts,tsx,scss}'",
     "test": "jest",
-    "test:type": "tsc --noEmit"
+    "test:type": "tsc --noEmit",
+    "fmt": "prettier --write '**/*{ts,tsx}'",
+    "prepublishOnly": "run-s clean lint build",
+    "docs": "docz dev",
+    "docs:build": "docz build",
+    "docs:typecheck": "node scripts/typecheck.js",
+    "now-build": "run-s build docs:build",
+    "dev": "run-p start docs"
   }
 }

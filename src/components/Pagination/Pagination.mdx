@@ -1,0 +1,123 @@
+---
+name: Pagination
+menu: Components
+route: /pagination
+---
+
+import { Playground } from "docz"
+import { Pagination } from "./Pagination"
+
+
+# Pagination
+
+複数のページ間を遷移するためのコンポーネントです
+
+## CSS
+
+- ページネーション全体を`pl-pagination`で囲みます。
+  - `pl-pagination-previous` `pl-pagination-next`で前・次のページへの遷移導線を描画します
+    - 有効でない（ex. すでに最初・最後のページにいる）場合は`.is-disabled`クラスを付与します
+  - `pl-pagination-list`でページネーションの要素を囲みます
+    - `pl-pagination-item`でページネーションの要素を描画します。`is-active`で現在アクティブなページを表現します
+    - `pl-pagination-ellipsis`で要素間の`...`を表現します
+
+
+<Playground>
+  <div className='pl-pagination'>
+    <a href='#' className='pl-pagination-previous is-disabled'>
+      <i className="ri-arrow-left-s-line" />
+    </a>
+    <ul className='pl-pagination-list'>
+      <li className='pl-pagination-item is-active'>
+        <a>
+          1
+        </a>
+      </li>
+      <li className='pl-pagination-item'>
+        <a>
+          2
+        </a>
+      </li>
+      <span className='pl-pagination-ellipsis'>&hellip;</span>
+      <li className='pl-pagination-item'>
+        <a>
+          5
+        </a>
+      </li>
+    </ul>
+    <a href='#' className='pl-pagination-next'>
+      <i className="ri-arrow-right-s-line" />
+    </a>
+  </div>
+</Playground>
+
+## React
+
+- ページネーション全体を`<Pagination />`で囲みます。
+  - `<Pagination.Previous />` `<Pagination.Next />`で前・次のページへの遷移導線を描画します
+    - 有効でない（ex. すでに最初・最後のページにいる）場合は`disabled` propsを付与します
+  - `<Pagination.List />`でページネーションの要素を囲みます
+    - `<Pagination.Item />`でページネーションの要素を描画します。`active`propsで現在アクティブなページを表現します
+    - `<Pagination.Ellipsis />`で要素間の`...`を表現します
+
+
+<Playground>
+  <Pagination>
+    <Pagination.Previous disabled href='#' />
+    <Pagination.List>
+      <Pagination.Item active>
+        <a href='#'>
+          1
+        </a>
+      </Pagination.Item>
+      <Pagination.Item>
+        <a href='#'>
+          2
+        </a>
+      </Pagination.Item>
+      <Pagination.Ellipsis />
+      <Pagination.Item>
+        <a href='#'>
+          5
+        </a>
+      </Pagination.Item>
+    </Pagination.List>
+    <Pagination.Next href='#' />
+  </Pagination>
+</Playground>
+
+途中のページがアクティブな例:
+
+<Playground>
+  <Pagination>
+    <Pagination.Previous href='#' />
+    <Pagination.List>
+      <Pagination.Item>
+        <a href='#'>
+          1
+        </a>
+      </Pagination.Item>
+      <Pagination.Item>
+        <a href='#'>
+          2
+        </a>
+      </Pagination.Item>
+      <Pagination.Item active>
+        <a href='#'>
+          3
+        </a>
+      </Pagination.Item>
+      <Pagination.Item>
+        <a href='#'>
+          4
+        </a>
+      </Pagination.Item>
+      <Pagination.Item>
+        <a href='#'>
+          5
+        </a>
+      </Pagination.Item>
+    </Pagination.List>
+    <Pagination.Next href='#' />
+  </Pagination>
+</Playground>

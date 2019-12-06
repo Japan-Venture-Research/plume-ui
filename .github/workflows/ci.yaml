@@ -24,3 +24,13 @@ jobs:
           npm run lint
           npm run test:type
           npm run test
+      - name: typecheck docs
+        run: npm run docs:typecheck
+      - uses: 8398a7/action-slack@v2.4.2
+        with:
+          status: ${{ job.status }}
+          author_name: Type Checking
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: always()

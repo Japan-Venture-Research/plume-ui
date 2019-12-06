@@ -1,0 +1,39 @@
+---
+name: Tooltip
+menu: Components
+route: /tooltip
+---
+
+import { Playground } from "docz"
+import { Tooltip } from "./Tooltip"
+import { Centered } from '../../doc-components/Centered'
+
+# Tooltip
+
+ツールチップは、補足的な情報を表示するためのコンポーネントです。ユーザーがマウスオーバーしたり、クリックした際に表示されます。
+
+️❗️Tooltipはユーザーの能動的なアクションがないと表示されないため、単なる補足ではなくユーザーにとって重要性が高い情報に関してはツールチップ以外のUIでの表現を考慮すべきです️
+
+## CSS
+
+`pl-tooltip`クラスを使います。ツールチップを表示するDOM要素（典型的にはアイコン）を囲みます。
+アクセシビリティを考慮し、ツールチップのテキストは（スクリーンリーダーなどでも有効な）`aria-label`に対して設定します （Githubのデザインシステムである[Primer](https://primer.style/css/components/tooltips)を参考にしています。）
+
+<Playground>
+    <Centered>
+        <span className="pl-tooltip" aria-label="こんにちは！">
+            <i className="ri-question-fill" />
+        </span>
+    </Centered>
+</Playground>
+
+## React
+
+`Tooltip`コンポーネントでツールチップを表示するコンポーネントを囲みます。
+`label`propsに表示するテキストを渡します。
+
+<Playground>
+    <Tooltip label="なんと！たからばこはミミックだった！">
+       たからばこ
+    </Tooltip>
+</Playground>

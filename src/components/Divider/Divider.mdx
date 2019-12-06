@@ -1,0 +1,42 @@
+---
+name: Divider
+menu: Components
+route: /divider
+---
+
+import { Playground } from "docz"
+import { Divider } from "./Divider"
+
+# Divider
+
+コンテンツ間に線を引く役割です。
+
+## CSS
+
+`pl-divider`クラスを使います
+
+<Playground>
+  <hr className="pl-divider" />
+</Playground>
+
+### Dashed
+
+点線のスタイルにします。
+
+<Playground>
+  <hr className="pl-divider is-dashed" />
+</Playground>
+
+## React
+
+<Playground>
+  <Divider />
+</Playground>
+
+### Dashed
+
+点線のスタイルにします。
+
+<Playground>
+  <Divider dashed />
+</Playground>

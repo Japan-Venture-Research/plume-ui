@@ -1,0 +1,278 @@
+---
+name: Column
+menu: Layout
+route: /column
+---
+
+import { Playground } from "docz"
+import { Column } from "./Column"
+import { Button } from "../../components/Button/Button"
+
+# Column
+
+複数のアイテムを横並びにするレイアウトで使います。
+
+## CSS
+
+`pl-column-group`クラスで`pl-column`クラスの要素を囲みます。内側にいくつ`pl-column`があっても等倍で並びます。
+
+<Playground>
+  <div className="pl-column-group">
+    <div className="pl-column">
+      <Button color='black' fullwidth>button1</Button>
+    </div>
+    <div className='pl-column'>
+      <Button color='black' fullwidth>button2</Button>
+    </div>
+  </div>
+  <div className="pl-column-group">
+    <div className="pl-column">
+      <Button color='black' fullwidth>button1</Button>
+    </div>
+    <div className='pl-column'>
+      <Button color='black' fullwidth>button2</Button>
+    </div>
+    <div className='pl-column'>
+      <Button color='black' fullwidth>button2</Button>
+    </div>
+  </div>
+</Playground>
+
+### Responsive
+
+デフォルトではcolumnの横並びは[largeブレークポイント](/responsive)から有効になります。
+`.pl-column-group`に`.from-small`クラスを付与することで全てのウィンドウ幅、`.from-medium`で`medium`ブレークポイント以上の幅でcolumnが横並びになります。
+
+<Playground>
+  <div>
+    default
+    <div className="pl-column-group">
+      <div className="pl-column">
+        <Button color='black' fullwidth>button1</Button>
+      </div>
+      <div className='pl-column'>
+        <Button color='black' fullwidth>button2</Button>
+      </div>
+    </div>
+  </div>
+  <div>
+    from small
+    <div className="pl-column-group from-small">
+      <div className="pl-column">
+        <Button color='black' fullwidth>button1</Button>
+      </div>
+      <div className='pl-column'>
+        <Button color='black' fullwidth>button2</Button>
+      </div>
+    </div>
+  </div>
+  <div>
+    from medium
+    <div className="pl-column-group from-medium">
+      <div className="pl-column">
+        <Button color='black' fullwidth>button1</Button>
+      </div>
+      <div className='pl-column'>
+        <Button color='black' fullwidth>button2</Button>
+      </div>
+    </div>
+  </div>
+</Playground>
+
+### Size
+
+`is-1`から`is-12`までの数値をクラスで指定して、`pl-column-group`が12としての`pl-column`の幅を指定できます
+
+<Playground>
+  <div className="pl-column-group">
+    <div className="pl-column is-3">
+      <Button color='black' fullwidth>3</Button>
+    </div>
+    <div className='pl-column'>
+      <Button color='black' fullwidth>auto</Button>
+    </div>
+  </div>
+  <div className="pl-column-group">
+    <div className="pl-column is-7">
+      <Button color='black' fullwidth>7</Button>
+    </div>
+    <div className='pl-column'>
+      <Button color='black' fullwidth>auto</Button>
+    </div>
+  </div>
+  <div className="pl-column-group">
+    <div className="pl-column is-3">
+      <Button color='black' fullwidth>3</Button>
+    </div>
+    <div className='pl-column'>
+      <Button color='black' fullwidth>auto</Button>
+    </div>
+    <div className="pl-column is-2">
+      <Button color='black' fullwidth>2</Button>
+    </div>
+  </div>
+</Playground>
+
+### Gap
+
+`is-gap-none` `is-gap-small` `is-gap-medium` `is-gap-large`クラスで`pl-column`間のスペースを調整できます。
+
+<Playground>
+  <div className="pl-column-group is-gap-none">
+    <div className="pl-column">
+      <Button color='black' fullwidth>button1</Button>
+    </div>
+    <div className='pl-column'>
+      <Button color='light' fullwidth>button2</Button>
+    </div>
+  </div>
+    <div className="pl-column-group is-gap-large">
+    <div className="pl-column">
+      <Button color='black' fullwidth>button1</Button>
+    </div>
+    <div className='pl-column'>
+      <Button color='light' fullwidth>button2</Button>
+    </div>
+  </div>
+</Playground>
+
+
+## React
+
+`Column.Group`で`Column`を囲みます。内側にいくつ`Column`があっても等倍で並びます。
+
+<Playground>
+  <Column.Group>
+    <Column>
+      <Button color='black' fullwidth>button1</Button>
+    </Column>
+    <Column>
+      <Button color='black' fullwidth>button2</Button>
+    </Column>
+  </Column.Group>
+    <Column.Group>
+    <Column>
+      <Button color='black' fullwidth>button1</Button>
+    </Column>
+    <Column>
+      <Button color='black' fullwidth>button2</Button>
+    </Column>
+        <Column>
+      <Button color='black' fullwidth>button3</Button>
+    </Column>
+  </Column.Group>
+</Playground>
+
+### Responsive
+
+デフォルトではcolumnの横並びは[largeブレークポイント](/responsive)から有効になります。
+`from`propsを`small`にすることで全てのウィンドウ幅、`medium`で`medium`ブレークポイント以上の幅でcolumnが横並びになります。
+
+<Playground>
+  <div>
+    default
+    <Column.Group>
+      <Column>
+        <Button color='black' fullwidth>button1</Button>
+      </Column>
+      <Column>
+        <Button color='black' fullwidth>button2</Button>
+      </Column>
+    </Column.Group>
+  </div>
+  <div>
+    from small
+    <Column.Group from='small'>
+      <Column>
+        <Button color='black' fullwidth>button1</Button>
+      </Column>
+      <Column>
+        <Button color='black' fullwidth>button2</Button>
+      </Column>
+    </Column.Group>
+  </div>
+  <div>
+    from medium
+    <Column.Group from='medium'>
+      <Column>
+        <Button color='black' fullwidth>button1</Button>
+      </Column>
+      <Column>
+        <Button color='black' fullwidth>button2</Button>
+      </Column>
+    </Column.Group>
+  </div>
+</Playground>
+
+### Size
+
+`size` propsで1から12までの数値を指定して、`Column.Group`が12としての`Column`の幅を指定できます
+
+<Playground>
+  <Column.Group>
+    <Column size={3}>
+      <Button color='black' fullwidth>3</Button>
+    </Column>
+    <Column>
+      <Button color='black' fullwidth>auto</Button>
+    </Column>
+  </Column.Group>
+  <Column.Group>
+    <Column size={7}>
+      <Button color='black' fullwidth>7</Button>
+    </Column>
+    <Column>
+      <Button color='black' fullwidth>auto</Button>
+    </Column>
+  </Column.Group>
+    <Column.Group>
+    <Column size={3}>
+      <Button color='black' fullwidth>3</Button>
+    </Column>
+    <Column>
+      <Button color='black' fullwidth>auto2</Button>
+    </Column>
+    <Column size={2}>
+      <Button color='black' fullwidth>2</Button>
+    </Column>
+  </Column.Group>
+</Playground>
+
+### Gap
+
+`Column.Group`の`gapSize`propsを`none` `small` `medium` `large`のいずれかに指定して、`Column`間のスペースを調整できます。
+
+<Playground>
+  <Column.Group gapSize='none'>
+    <Column>
+      <Button color='black' fullwidth>button1</Button>
+    </Column>
+    <Column>
+      <Button color='light' fullwidth>button2</Button>
+    </Column>
+  </Column.Group>
+  <Column.Group gapSize='small'>
+    <Column>
+      <Button color='black' fullwidth>button1</Button>
+    </Column>
+    <Column>
+      <Button color='light' fullwidth>button2</Button>
+    </Column>
+  </Column.Group>
+  <Column.Group gapSize='medium'>
+    <Column>
+      <Button color='black' fullwidth>button1</Button>
+    </Column>
+    <Column>
+      <Button color='light' fullwidth>button2</Button>
+    </Column>
+  </Column.Group>
+  <Column.Group gapSize='large'>
+    <Column>
+      <Button color='black' fullwidth>button1</Button>
+    </Column>
+    <Column>
+      <Button color='light' fullwidth>button2</Button>
+    </Column>
+  </Column.Group>
+</Playground>

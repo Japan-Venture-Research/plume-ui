@@ -1,0 +1,51 @@
+---
+name: Getting Started
+route: /
+---
+
+# 🐦 plume-ui
+
+[**plume-ui**](https://github.com/Japan-Venture-Research/plume-ui)は、アプリケーションのUIを開発するためにつくられたUIフレームワークです。  
+
+様々なシステムを開発するときに利用できるように、HTMLからはCSSフレームワークとして、ReactアプリケーションからはReactコンポーネントライブラリとして使えるように設計されています。
+
+開発については[こちら](/dev)を参照してください。
+
+## インストール
+
+npmコマンドでGithubリポジトリからインストールしてください。事前にNode.jsをインストールしておく必要があります。
+
+```bash
+$ npm install --save Japan-Venture-Research/plume-ui
+```
+
+またはyarnの場合:
+
+```
+$ yarn add Japan-Venture-Research/plume-ui
+```
+
+## 使い方
+
+Reactアプリケーションでは、次のようにCSSを読み込んだ上で、`plume-ui`から使いたいコンポーネントをimportします。
+
+```tsx
+import React from "react"
+import ReactDOM from "react-dom"
+
+import "plume-ui/dist/index.css"
+import { Tag } from "plume-ui"
+
+function App() {
+  return (
+    <Tag>
+      test
+    </Tag>
+  );
+}
+
+const rootElement = document.getElementById("root")
+ReactDOM.render(<App />, rootElement)
+```
+
+CSSフレームワークとしても同じように、npmモジュールとしてインストールした上でsass / cssファイルを読み込んで使えます。

@@ -1,0 +1,174 @@
+---
+name: Button
+menu: Components
+route: /button
+---
+
+import { Playground } from "docz"
+import { Button } from './Button'
+
+# Button
+
+ボタンです。
+
+## CSS
+
+`pl-button`クラスを使います。
+
+<Playground>
+  <button className="pl-button">ボタン</button>
+</Playground>
+
+### Colors
+
+`is-black`, `is-white`などのクラスで色を変えられます。
+
+<Playground>
+  <Button.Group>
+    <button className="pl-button is-black">black</button>
+    <button className="pl-button is-light">light</button>
+    <button className="pl-button is-white">white</button>
+  </Button.Group>
+</Playground>
+
+### Size
+
+`is-small` `is-normal` `is-large`クラスでサイズを変更できます。デフォルトは`is-normal`です。
+
+<Playground>
+  <Button.Group>
+    <button className="pl-button is-small">詳しくみる</button>
+    <button className="pl-button is-normal">無料トライアル</button>
+    <button className="pl-button is-large">無料トライアル</button>
+  </Button.Group>
+</Playground>
+
+### Outlined
+
+線で囲まれたタイプのボタンは`is-outlined`クラスをつけます。
+
+<Playground>
+  <Button.Group>
+    <button className="pl-button is-light is-outlined">small</button>
+    <button className="pl-button is-black is-outlined">normal</button>
+    <button className="pl-button is-black is-outlined is-round">normal</button>
+  </Button.Group>
+</Playground>
+
+### Round
+
+`is-round`クラスで角丸のボタンになります。
+
+<Playground>
+  <button className="pl-button is-black is-round">button</button>
+</Playground>
+
+### Display
+
+`is-fullwidth`クラスで幅広なボタンになります。
+
+<Playground>
+  <button className="pl-button is-black is-outlined is-fullwidth">button</button>
+</Playground>
+
+### Disabled
+
+ボタンを押せないようにする場合に使います。
+
+<Playground>
+  <button className="pl-button is-black is-round" disabled>button</button>
+</Playground>
+
+### Button Group
+
+`pl-button-group`クラスを使います。複数のボタンを横並びにする場合に使います。
+
+<Playground>
+  <div className='pl-button-group'>
+    <button className="pl-button is-black is-round">button</button>
+    <button className="pl-button is-black is-round">button</button>
+    <button className="pl-button is-black is-round">button</button>
+  </div>
+</Playground>
+
+## React
+
+<Playground>
+  <Button>button</Button>
+</Playground>
+
+### Colors
+
+`color` propsで色を変えます。
+
+<Playground>
+  <Button.Group>
+    <Button color="black">black</Button>
+    <Button color="light">light</Button>
+    <Button color="white">white</Button>
+  </Button.Group>
+</Playground>
+
+
+### Size
+
+`size`propsでサイズを変更できます
+
+<Playground>
+  <Button.Group>
+    <Button size="small">small</Button>
+    <Button size="normal">normal</Button>
+    <Button size="large">large</Button>
+  </Button.Group>
+</Playground>
+
+### Outlined
+
+`outlined`propsで線で囲まれたタイプのボタンになります
+
+<Playground>
+  <Button.Group>
+    <Button color='light' outlined>outlined</Button>
+    <Button color='black' outlined>outlined</Button>
+  </Button.Group>
+</Playground>
+
+### Round
+
+`round`propsで角丸のボタンになります。
+
+<Playground>
+  <Button.Group>
+    <Button color="black" round>button</Button>
+  </Button.Group>
+</Playground>
+
+### Display
+
+`fullwidth` propsで幅広なボタンになります。
+
+<Playground>
+  <Button color='black' outlined fullwidth>button</Button>
+</Playground>
+
+### Disabled
+
+ボタンを押せないようにする場合に使います。
+
+<Playground>
+  <Button.Group>
+    <Button color="light" disabled>button</Button>
+    <Button color="black" disabled>button</Button>
+  </Button.Group>
+</Playground>
+
+### Button Group
+
+複数のボタンを横並びにする場合に使います。
+
+<Playground>
+  <Button.Group>
+    <Button color="light" round>button</Button>
+    <Button color="black">button</Button>
+  </Button.Group>
+</Playground>

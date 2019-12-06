@@ -1,0 +1,39 @@
+---
+name: Tab
+menu: Components
+route: /tab
+---
+
+import { Playground } from "docz"
+import { Tab } from "./Tab"
+
+
+# Tab
+
+どのコンテンツが現在表示されているかを表現し、コンテンツを切り替えるためのコンポーネントです。
+
+## CSS
+
+`pl-tab-group`で`pl-tab`のリストを囲みます。
+`is-active`クラスで現在表示されているコンテンツを示します。
+
+<Playground>
+  <div className="pl-tab-group">
+    <a className="pl-tab is-active" href="#">企業概要</a>
+    <a className="pl-tab" href="#">ストーリー</a>
+    <a className="pl-tab" href="#">投資先</a>
+  </div>
+</Playground>
+
+## React
+
+`Tab.Group`で`Tab`コンポーネントのリストを囲みます。
+`active`propsで現在表示されているコンテンツを指定します。
+
+<Playground>
+  <Tab.Group>
+    <Tab as="a" href="#">企業概要</Tab>
+    <Tab as="a" href="#" active>ストーリー</Tab>
+    <Tab as="a" href="#">投資先</Tab>
+  </Tab.Group>
+</Playground>
