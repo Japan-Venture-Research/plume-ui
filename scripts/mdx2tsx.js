@@ -22,7 +22,7 @@ const importReact = () => tree => {
     // Prepend React import
     node.value = `${IMPORT_REACT}\n${node.value}`
   } else {
-    // Add import node if no import desclarations
+    // Add import node if no import declarations
     tree.children.splice(0, 0, {
       type: 'import',
       value: IMPORT_REACT,
@@ -60,7 +60,7 @@ const processor = unified()
   .use(mdx)
   .use(extract)
   .use(wrapJsx)
-  .use(importReact)
   .use(tsIgnore)
+  .use(importReact)
 
 process.stdin.pipe(stream(processor)).pipe(process.stdout)

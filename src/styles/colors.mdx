@@ -16,7 +16,7 @@ import { ColorSwatch } from '../doc-components/ColorSwatch'
 <React.Fragment>
   {Object.entries(colors).map(([name, code], i) => {
     console.log(`${name}: ${JSON.stringify(code)}`)
-    // Skip
+    // Skip exceptional `__filemeta` appended by Docz
     if (name === '__filemeta') {
       return
     }
