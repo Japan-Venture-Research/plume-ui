@@ -13,9 +13,6 @@
     "core-js": "^3.3.4",
     "lodash": "^4.17.15"
   },
-  "engines": {
-    "node": "12.x"
-  },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
