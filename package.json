@@ -1,7 +1,7 @@
 {
   "name": "plume-ui",
   "description": "plume ui framework",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "plume-ui team",
   "main": "dist/index.js",
   "style": "dist/index.css",
@@ -12,9 +12,6 @@
     "classnames": "^2.2.6",
     "core-js": "^3.3.4",
     "lodash": "^4.17.15"
-  },
-  "engines": {
-    "node": "12.x"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
