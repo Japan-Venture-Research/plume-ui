@@ -61,8 +61,6 @@ $prev-next-size: 72px;
   font-size: 15px;
   color: $black10;
   font-family: Roboto;
-  width: $item-size;
-  height: $item-size;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -70,7 +68,9 @@ $prev-next-size: 72px;
   margin-right: 5px;
 
   a {
+    display: block;
     color: $black10;
+    padding: 10px 18px; // almost 44x44 size
   }
 
   &:hover {
