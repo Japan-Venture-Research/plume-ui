@@ -21,6 +21,9 @@ import { Pagination } from "./Pagination"
     - `pl-pagination-item`でページネーションの要素を描画します。`is-active`で現在アクティブなページを表現します
     - `pl-pagination-ellipsis`で要素間の`...`を表現します
 
+---
+
+`pl-pagination-item`の直下に`a` / `div` / `span`などの要素を配置してください
 
 <Playground>
   <div className='pl-pagination'>
@@ -41,7 +44,12 @@ import { Pagination } from "./Pagination"
       <span className='pl-pagination-ellipsis'>&hellip;</span>
       <li className='pl-pagination-item'>
         <a href='#'>
-          5
+          312
+        </a>
+      </li>
+      <li className='pl-pagination-item'>
+        <a href='#'>
+          313
         </a>
       </li>
     </ul>
@@ -60,12 +68,15 @@ import { Pagination } from "./Pagination"
     - `<Pagination.Item />`でページネーションの要素を描画します。`active`propsで現在アクティブなページを表現します
     - `<Pagination.Ellipsis />`で要素間の`...`を表現します
 
+---
+
+`Pagination.Item`の直下に`a` / `div` / `span`などの要素を配置してください
 
 <Playground>
   <Pagination>
     <Pagination.Previous disabled href='#' />
     <Pagination.List>
-      <Pagination.Item active>
+      <Pagination.Item>
         <a href='#'>
           1
         </a>
@@ -76,9 +87,14 @@ import { Pagination } from "./Pagination"
         </a>
       </Pagination.Item>
       <Pagination.Ellipsis />
+      <Pagination.Item active>
+        <a href='#'>
+          312
+        </a>
+      </Pagination.Item>
       <Pagination.Item>
         <a href='#'>
-          5
+          313
         </a>
       </Pagination.Item>
     </Pagination.List>
