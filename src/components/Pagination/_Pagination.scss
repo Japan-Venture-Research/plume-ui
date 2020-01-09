@@ -68,8 +68,8 @@ $prev-next-size: 72px;
   margin-right: 5px;
 
   > a,
-  div,
-  span {
+  > div,
+  > span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +88,9 @@ $prev-next-size: 72px;
     background-color: $black20;
     cursor: default;
 
-    a {
+    > a,
+    > div,
+    > span {
       color: $white00;
     }
   }
