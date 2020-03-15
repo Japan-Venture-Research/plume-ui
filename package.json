@@ -40,7 +40,7 @@
     "remark-parse": "^7.0.2",
     "remark-stringify": "^7.0.4",
     "rimraf": "^3.0.0",
-    "rollup": "^1.22.0",
+    "rollup": "^2.0.6",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
