@@ -6,7 +6,7 @@ export type CompanyLogoImageProps = {
   name: string
 } & BaseProps<'img'>
 
-export const CompanyLogoImage: React.FC<CompanyLogoImageProps> = props => {
+export const CompanyLogoImage: React.FC<CompanyLogoImageProps> = (props) => {
   return (
     <Base
       as="img"
