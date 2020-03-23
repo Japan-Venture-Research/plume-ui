@@ -6,7 +6,7 @@ type Props = {
   code: string
 }
 
-export const ColorSwatch: React.FC<Props> = props => {
+export const ColorSwatch: React.FC<Props> = (props) => {
   return (
     <Wrapper code={props.code}>
       <Color code={props.code} />
@@ -25,7 +25,7 @@ const Wrapper = styled.span<{ code: string }>`
   border-radius: 10px;
   margin: 1rem 0.5rem;
 
-  ${props =>
+  ${(props) =>
     props.code.startsWith('linear') &&
     `
     width: 380px;
@@ -38,7 +38,7 @@ const Color = styled.span<{ code: string }>`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   display: inline-block;
-  background: ${props => props.code};
+  background: ${(props) => props.code};
   width: 100%;
   height: 130px;
 `
