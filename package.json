@@ -37,7 +37,7 @@
     "postcss-cli": "^7.1.0",
     "prettier": "^2.0.1",
     "remark-mdx": "^1.5.1",
-    "remark-parse": "^7.0.2",
+    "remark-parse": "^8.0.0",
     "remark-stringify": "^7.0.4",
     "rimraf": "^3.0.0",
     "rollup": "^2.0.6",
