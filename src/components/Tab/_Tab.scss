@@ -7,13 +7,11 @@
 
 .pl-tab {
   color: $black30;
-  font-size: 1rem;
-  padding: 0.5rem 1rem 0.4rem;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
+  font-size: 14px;
+  padding: 16px 16px 12px;
   border-bottom: 3px solid $white00 !important;
   box-shadow: none !important;
-  line-height: 1.8;
+  line-height: 1.25;
   display: flex;
   align-items: center;
 
@@ -26,10 +24,6 @@
   &:focus {
     color: $text-strong;
     text-decoration: none;
-  }
-
-  &:first-child {
-    margin-left: 0;
   }
 
   &.is-active {
@@ -46,6 +40,6 @@
 .pl-tab-count {
   margin-left: 8px;
   margin-right: -4px;
-  font-size: 15px;
+  font-size: 14px;
   color: $gray80;
 }
