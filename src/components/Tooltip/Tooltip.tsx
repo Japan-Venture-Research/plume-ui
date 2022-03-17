@@ -20,10 +20,16 @@ export const Tooltip = <T extends Available>({
       as={props.as || defaultTag}
       className={classNames('pl-tooltip', className)}
     >
-      <span className={classNames('box', (props.long ? 'long' : '' ), props.place || 'top')}>{props.label}</span>
       <span
-        {...props}
-      />
+        className={classNames(
+          'box',
+          props.long ? 'long' : '',
+          props.place || 'top'
+        )}
+      >
+        {props.label}
+      </span>
+      <span {...props} />
     </Base>
   )
 }
