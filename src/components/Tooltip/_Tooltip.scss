@@ -8,7 +8,7 @@
     display: none;
     opacity: 0;
     width: max-content;
-    max-width: 160px;
+    max-width: 200px;
     padding: 4px 8px;
     color: $white00;
     pointer-events: none;
@@ -17,10 +17,6 @@
     border-radius: $radius;
     font-size: 11px;
     line-height: 1.25;
-
-    &.long {
-      max-width: 200px;
-    }
 
     &.top {
       right: 50%;

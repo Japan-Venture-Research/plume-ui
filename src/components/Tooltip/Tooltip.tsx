@@ -8,7 +8,7 @@ type Available = typeof defaultTag | 'div' | 'a'
 export type TooltipProps<T extends Available = typeof defaultTag> = {
   label: string
   place?: 'top, bottom, left, right'
-  long: boolean
+  id?: string
 } & BaseProps<T>
 
 export const Tooltip = <T extends Available>({
@@ -19,14 +19,9 @@ export const Tooltip = <T extends Available>({
     <Base
       as={props.as || defaultTag}
       className={classNames('pl-tooltip', className)}
+      id={props.id}
     >
-      <span
-        className={classNames(
-          'box',
-          props.long ? 'long' : '',
-          props.place || 'top'
-        )}
-      >
+      <span className={classNames('box', props.place || 'top')}>
         {props.label}
       </span>
       <span {...props} />
