@@ -19,6 +19,8 @@ jobs:
           key: hosting-${{ runner.os }}-node
       - run: 'npm ci'
       - run: 'npm run hosting-build'
+      - run: 'ls .docz/dist'
+        if: always()
       - uses: FirebaseExtended/action-hosting-deploy@v0
         if: always()
         with:
