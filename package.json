@@ -76,7 +76,7 @@
     "docs": "docz dev",
     "docs:build": "docz build",
     "docs:typecheck": "node scripts/typecheck.js",
-    "now-build": "run-s build docs:build",
+    "hosting-build": "run-s build docs:build",
     "dev": "run-p start docs"
   }
 }
