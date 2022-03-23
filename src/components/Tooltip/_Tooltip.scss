@@ -1,7 +1,38 @@
 .pl-tooltip {
   position: relative;
 
-  // tooltip box
+  //React tooltip overwrite
+  .__react_component_tooltip {
+    max-width: 200px;
+    padding: 4px 8px !important;
+    background: rgba($black10, 0.85) !important;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: $radius !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+
+    &.show {
+      opacity: 1 !important;
+    }
+
+    &.place-top {
+      margin-top: -8px !important;
+    }
+
+    &.place-bottom {
+      margin-bottom: -12px !important;
+    }
+
+    &.place-left {
+      margin-left: -8px !important;
+    }
+
+    &.place-right {
+      margin-right: -8px !important;
+    }
+  }
+
+  // css tooltip box
   & .box {
     position: absolute;
     z-index: 100;
@@ -17,6 +48,7 @@
     border-radius: $radius;
     font-size: 11px;
     line-height: 1.25;
+    white-space: normal;
 
     &.top {
       right: 50%;

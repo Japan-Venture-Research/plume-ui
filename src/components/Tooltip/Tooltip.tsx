@@ -1,6 +1,7 @@
 import * as React from 'react'
 import classNames from 'classnames'
 import { Base, BaseProps } from '../../internal/Base'
+import ReactTooltip from 'react-tooltip'
 
 const defaultTag = 'span'
 type Available = typeof defaultTag | 'div' | 'a'
@@ -21,10 +22,17 @@ export const Tooltip = <T extends Available>({
       className={classNames('pl-tooltip', className)}
       id={props.id}
     >
-      <span className={classNames('box', props.place || 'top')}>
-        {props.label}
-      </span>
-      <span {...props} />
+      <span
+        data-tip={props.label}
+        data-place={props.place || 'top'}
+        data-effect="solid"
+        data-offset="{'top': 0, 'bottom':0, 'left': 0, 'right':0}"
+        data-arrow-color="transparent"
+        data-delay-hide="100"
+        data-delay-show="100"
+        {...props}
+      />
+      <ReactTooltip />
     </Base>
   )
 }

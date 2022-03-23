@@ -1,7 +1,7 @@
 {
   "name": "plume-ui",
   "description": "plume ui framework",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "author": "plume-ui team",
   "main": "dist/index.js",
   "style": "dist/index.css",
@@ -11,7 +11,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "core-js": "^3.3.4",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "react-tooltip": "^4.2.21"
   },
   "engines": {
     "node": ">=10.x"
