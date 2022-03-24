@@ -16,6 +16,8 @@ export const Tooltip = <T extends Available>({
   className,
   ...props
 }: TooltipProps<T>) => {
+  const randomID = 'pl-tooltip' + String(Math.random())
+
   return (
     <Base
       as={props.as || defaultTag}
@@ -23,6 +25,7 @@ export const Tooltip = <T extends Available>({
       id={props.id}
     >
       <span
+        data-for={randomID}
         data-tip={props.label}
         data-place={props.place || 'top'}
         data-effect="solid"
@@ -32,7 +35,7 @@ export const Tooltip = <T extends Available>({
         data-delay-show="100"
         {...props}
       />
-      <ReactTooltip />
+      <ReactTooltip id={randomID} />
     </Base>
   )
 }
