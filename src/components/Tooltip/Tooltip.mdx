@@ -6,6 +6,7 @@ route: /tooltip
 
 import { Playground } from "docz"
 import { Tooltip } from "./Tooltip"
+import { TooltipWrapper } from "./Tooltip"
 import { Centered } from '../../doc-components/Centered'
 
 # Tooltip
@@ -38,4 +39,10 @@ import { Centered } from '../../doc-components/Centered'
     <Tooltip label="なんと！たからばこはミミックだった！" place="top">
        たからばこ
     </Tooltip>
+</Playground>
+
+`TooltipWrapper`コンポーネントを_app.tsxなどに追記します。
+
+<Playground>
+    <TooltipWrapper />
 </Playground>

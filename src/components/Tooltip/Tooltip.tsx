@@ -2,6 +2,7 @@ import * as React from 'react'
 import classNames from 'classnames'
 import { Base, BaseProps } from '../../internal/Base'
 import ReactTooltip from 'react-tooltip'
+import { useEffect } from 'react'
 
 const defaultTag = 'span'
 type Available = typeof defaultTag | 'div' | 'a'
@@ -16,8 +17,9 @@ export const Tooltip = <T extends Available>({
   className,
   ...props
 }: TooltipProps<T>) => {
-  const randomID = 'pl-tooltip' + String(Math.random())
-
+  useEffect(() => {
+    ReactTooltip.rebuild()
+  })
   return (
     <Base
       as={props.as || defaultTag}
@@ -25,7 +27,7 @@ export const Tooltip = <T extends Available>({
       id={props.id}
     >
       <span
-        data-for={randomID}
+        data-for="pl-tooltip"
         data-tip={props.label}
         data-place={props.place || 'top'}
         data-effect="solid"
@@ -35,8 +37,15 @@ export const Tooltip = <T extends Available>({
         data-delay-show="100"
         {...props}
       />
-      <ReactTooltip id={randomID} />
     </Base>
+  )
+}
+
+export const TooltipWrapper = () => {
+  return (
+    <>
+      <ReactTooltip id="pl-tooltip" />
+    </>
   )
 }
 
