@@ -9,7 +9,7 @@ type Available = typeof defaultTag | 'div' | 'a'
 
 export type TooltipProps<T extends Available = typeof defaultTag> = {
   label: string
-  place?: 'top, bottom, left, right'
+  place?: 'top' | 'bottom' | 'left' | 'right'
   id?: string
 } & BaseProps<T>
 
