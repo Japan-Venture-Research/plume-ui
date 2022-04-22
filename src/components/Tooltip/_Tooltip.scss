@@ -32,9 +32,10 @@
   }
 }
 .pl-tooltip {
-  position: relative;
-
   // css tooltip box
+  & .wrap {
+    position: relative;
+  }
   & .box {
     position: absolute;
     z-index: 100;
