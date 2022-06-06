@@ -8,6 +8,8 @@ export { globalFont, displayFont } from './styles/font'
 // Components
 export { Tag, TagProps, TagGroupProps } from './components/Tag/Tag'
 export { Tab, TabProps, TabGroupProps } from './components/Tab/Tab'
+// 新しいデザインの検証が終わればTabにmergeする
+export { NewTab, NewTabProps, NewTabGroupProps } from './components/NewTab/NewTab'
 export {
   Button,
   ButtonProps,
