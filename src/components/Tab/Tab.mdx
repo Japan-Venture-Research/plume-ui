@@ -4,9 +4,8 @@ menu: Components
 route: /tab
 ---
 
-import { Playground } from "docz"
-import { Tab } from "./Tab"
-
+import { Playground } from 'docz'
+import { Tab } from './Tab'
 
 # Tab
 
@@ -21,19 +20,19 @@ import { Tab } from "./Tab"
 
 <Playground>
   <div className="pl-tab-group">
-    <a className="pl-tab is-active" href="#">企業概要</a>
-    <a className="pl-tab" href="#">ストーリー</a>
-    <a className="pl-tab" href="#">
-      投資先
-      <span className="pl-tab-count">
-        87
-      </span>
+    <a className="pl-tab pl-local-navigation is-active" href="#">
+      企業概要
     </a>
-    <a className="pl-tab" href="#">
+    <a className="pl-tab pl-local-navigation is-disabled" href="#">
+      ストーリー
+    </a>
+    <a className="pl-tab pl-local-navigation" href="#">
+      投資先
+      <span className="pl-tab-count">87</span>
+    </a>
+    <a className="pl-tab pl-local-navigation" href="#">
       スタートアップ投資
-      <span className="pl-tab-count">
-        1,023
-      </span>
+      <span className="pl-tab-count">1,023</span>
     </a>
   </div>
 </Playground>
@@ -41,13 +40,17 @@ import { Tab } from "./Tab"
 ## React
 
 `Tab.Group`で`Tab`コンポーネントのリストを囲みます。
-`active`propsで現在表示されているコンテンツを指定します。
-タブに数値を表示する場合は`count`propsに指定します。
+`active`props で現在表示されているコンテンツを指定します。
+タブに数値を表示する場合は`count`props に指定します。
 
 <Playground>
   <Tab.Group>
-    <Tab as="a" href="#">企業概要</Tab>
-    <Tab as="a" href="#">ストーリー</Tab>
+    <Tab as="a" href="#">
+      企業概要
+    </Tab>
+    <Tab as="a" href="#">
+      ストーリー
+    </Tab>
     <Tab as="a" href="#" count={0}>
       投資先
     </Tab>
