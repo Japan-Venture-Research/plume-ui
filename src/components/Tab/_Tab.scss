@@ -42,6 +42,7 @@
     cursor: default;
     color: $gray70 !important;
     background: $gray30 !important;
+    border: 1px solid $border-light !important;
   }
 
   &:hover.is-active {
