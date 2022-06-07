@@ -29,7 +29,6 @@ export const Tab = Object.assign(
         as={props.as || defaultTag}
         className={classNames(
           'pl-tab',
-          'pl-local-navigation',
           {
             'is-active': active,
           },
