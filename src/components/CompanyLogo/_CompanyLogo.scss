@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.16s 0s linear;
+  transition-property: width, height, padding;
 
   &.is-extra-small {
     width: 32px;
