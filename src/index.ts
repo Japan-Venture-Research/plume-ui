@@ -37,7 +37,11 @@ export {
   CompanyLogoImageProps,
 } from './components/CompanyLogo/CompanyLogo'
 
-export { Tooltip, TooltipProps } from './components/Tooltip/Tooltip'
+export {
+  Tooltip,
+  TooltipWrapper,
+  TooltipProps,
+} from './components/Tooltip/Tooltip'
 
 // Layout
 export { Column, ColumnProps, ColumnGroupProps } from './layout/Column/Column'

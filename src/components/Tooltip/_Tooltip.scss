@@ -1,61 +1,97 @@
-.pl-tooltip {
-  position: relative;
+#pl-tooltip {
+  //React tooltip overwrite
+  &.__react_component_tooltip {
+    max-width: 200px;
+    padding: 4px 8px !important;
+    background: rgba($black10, 0.85) !important;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: $radius !important;
+    font-size: 11px !important;
+    font-weight: normal;
+    line-height: 1.25 !important;
 
-  // tooltip box
-  &::after {
+    &.show {
+      opacity: 1 !important;
+    }
+
+    &.place-top {
+      margin-top: -8px !important;
+    }
+
+    &.place-bottom {
+      margin-bottom: -12px !important;
+    }
+
+    &.place-left {
+      margin-left: -8px !important;
+    }
+
+    &.place-right {
+      margin-right: -8px !important;
+    }
+  }
+}
+.pl-tooltip {
+  // css tooltip box
+  & .wrap {
+    position: relative;
+  }
+  & .box {
     position: absolute;
     z-index: 100;
     display: none;
     opacity: 0;
-    padding: 3px 5px;
+    width: max-content;
+    max-width: 200px;
+    padding: 4px 8px;
     color: $white00;
-    text-align: center;
-    word-wrap: break-word;
-    white-space: pre;
     pointer-events: none;
-    content: attr(aria-label);
-    background: $black10;
+    background: rgba($black10, 0.85);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
     border-radius: $radius;
-    font-size: 0.7rem;
+    font-size: 11px;
+    line-height: 1.25;
+    white-space: normal;
 
-    // direction is above
-    right: 50%;
-    bottom: 100%;
-    margin-bottom: 6px;
-    transform: translateX(50%);
-  }
+    &.top {
+      right: 50%;
+      bottom: 100%;
+      margin-bottom: 8px;
+      transform: translateX(50%);
+    }
 
-  //   tooltip arrow
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: 110;
-    display: none;
-    opacity: 0;
-    width: 0;
-    height: 0;
-    color: $black10;
-    pointer-events: none;
-    border: 6px solid transparent;
+    &.bottom {
+      right: 50%;
+      top: 100%;
+      margin-top: 12px;
+      transform: translateX(50%);
+    }
 
-    // direction style
-    top: -7px;
-    right: 50%;
-    bottom: auto;
-    margin-right: -6px;
-    border-top-color: $black10;
+    &.left {
+      right: 100%;
+      bottom: 50%;
+      margin-right: 8px;
+      transform: translateY(50%);
+    }
+
+    &.right {
+      left: 100%;
+      bottom: 50%;
+      margin-left: 8px;
+      transform: translateY(50%);
+    }
   }
 
   &:hover,
   &:active,
   &:focus {
-    &::before,
-    &::after {
+    & .box {
       display: inline-block;
       animation-name: tooltip-animation;
       animation-duration: 0.1s;
       animation-fill-mode: forwards;
       animation-timing-function: ease-in;
+      animation-delay: 0.1s;
     }
   }
 }

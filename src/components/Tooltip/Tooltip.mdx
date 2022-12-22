@@ -6,6 +6,7 @@ route: /tooltip
 
 import { Playground } from "docz"
 import { Tooltip } from "./Tooltip"
+import { TooltipWrapper } from "./Tooltip"
 import { Centered } from '../../doc-components/Centered'
 
 # Tooltip
@@ -16,13 +17,15 @@ import { Centered } from '../../doc-components/Centered'
 
 ## CSS
 
-`pl-tooltip`クラスを使います。ツールチップを表示するDOM要素（典型的にはアイコン）を囲みます。
-アクセシビリティを考慮し、ツールチップのテキストは（スクリーンリーダーなどでも有効な）`aria-label`に対して設定します （Githubのデザインシステムである[Primer](https://primer.style/css/components/tooltips)を参考にしています。）
+`pl-tooltip`クラスを使います。
 
 <Playground>
     <Centered>
-        <span className="pl-tooltip" aria-label="こんにちは！">
-            <i className="ri-question-fill" />
+        <span className="pl-tooltip">
+            <span className="wrap">
+                こんばんは
+                <span className="box top">こんにちは！</span>
+            </span>
         </span>
     </Centered>
 </Playground>
@@ -31,9 +34,17 @@ import { Centered } from '../../doc-components/Centered'
 
 `Tooltip`コンポーネントでツールチップを表示するコンポーネントを囲みます。
 `label`propsに表示するテキストを渡します。
+`place`propsに表示する位置を渡します。
+`id`propsにidを渡します。
 
 <Playground>
-    <Tooltip label="なんと！たからばこはミミックだった！">
+    <Tooltip label="なんと！たからばこはミミックだった！" place="top">
        たからばこ
     </Tooltip>
+</Playground>
+
+`TooltipWrapper`コンポーネントを_app.tsxなどに追記します。
+
+<Playground>
+    <TooltipWrapper />
 </Playground>

@@ -1,0 +1,28 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14.x'
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: hosting-${{ runner.os }}-node
+      - run: 'npm ci'
+      - run: 'npm run hosting-build'
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        if: always()
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PLUME_UI }}'
+          channelId: live
+          projectId: plume-ui

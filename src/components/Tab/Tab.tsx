@@ -11,6 +11,7 @@ export type TabProps<T extends Available = typeof defaultTag> = {
   children: string | JSX.Element
   count?: number
   active?: boolean
+  disabled?: boolean
 } & BaseProps<T>
 
 export { TabGroupProps } from './TabGroup'
@@ -20,6 +21,7 @@ export const Tab = Object.assign(
     className,
     count,
     active = false,
+    disabled = false,
     ...props
   }: TabProps<T>) => {
     return (
@@ -29,6 +31,9 @@ export const Tab = Object.assign(
           'pl-tab',
           {
             'is-active': active,
+          },
+          {
+            'is-disabled': disabled,
           },
           className
         )}

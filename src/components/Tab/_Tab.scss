@@ -3,49 +3,57 @@
   align-items: center;
   overflow: auto;
   white-space: nowrap;
+  gap: 4px;
 }
 
 .pl-tab {
-  color: $black30;
-  font-size: 1rem;
-  padding: 0.5rem 1rem 0.4rem;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
-  border-bottom: 3px solid $white00 !important;
-  box-shadow: none !important;
-  line-height: 1.8;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  padding: 10px 16px;
+  background: $gray40;
+  border: 1px solid $gray50;
+  border-radius: 32px;
+  flex: none;
+  flex-grow: 0;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: 400;
+  color: $black10;
+  height: 32px;
 
   &:hover,
   &:active {
-    color: $text-strong;
-    text-decoration: none;
+    background: $gray50 !important;
   }
 
   &:focus {
-    color: $text-strong;
-    text-decoration: none;
-  }
-
-  &:first-child {
-    margin-left: 0;
+    background: $gray50 !important;
   }
 
   &.is-active {
-    font-weight: 900;
-    color: $text-strong !important;
-    border-bottom: 3px solid $text-strong !important;
+    color: $white00 !important;
+    background: $black10 !important;
+  }
+
+  &.is-disabled,
+  &:hover.is-disabled {
+    cursor: default;
+    color: $gray70 !important;
+    background: $gray30 !important;
+    border: 1px solid $border-light !important;
+  }
+
+  &:hover.is-active {
+    color: $white00 !important;
+    background: $black30 !important;
   }
 }
 
-.pl-tab.is-active .pl-tab-count {
-  font-weight: normal;
-}
-
 .pl-tab-count {
-  margin-left: 8px;
+  margin-left: 4px;
   margin-right: -4px;
-  font-size: 15px;
+  font-size: 12px;
   color: $gray80;
 }

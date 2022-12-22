@@ -9,7 +9,7 @@ const baseColors = {
   gray50: '#e0e0e0',
   gray60: '#ccc',
   gray70: '#aaa',
-  gray80: '#999',
+  gray80: '#929292',
   gray90: '#666',
   red50: '#ea6e67',
   red60: '#e7574f',
