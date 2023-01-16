@@ -13,12 +13,6 @@ export default {
     'Styles',
     'Internal',
   ],
-  themeConfig: {
-    colors: {
-      primary: '#2a2a2a',
-    },
-    showPlaygroundEditor: true,
-  },
   htmlContext: {
     head: {
       // Load web fonts etc
@@ -33,15 +27,5 @@ export default {
         }
       ]
     }
-  },
-  modifyBundlerConfig: config => {
-    config.resolve.alias['src'] = path.join(__dirname, './src')
-    config.entry.app.push('./dist/index.css')
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader'],
-    })
-
-    return config
   },
 }
