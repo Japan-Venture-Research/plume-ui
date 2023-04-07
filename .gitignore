@@ -3,6 +3,8 @@ node_modules/
 .vscode/
 yarn-error.log
 .docz
+.node-version
+.idea
 
 # Build output 
 **/dist

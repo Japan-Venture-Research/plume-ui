@@ -28,22 +28,13 @@ const baseColors = {
   blueGray60: '#7c838f',
 
   // SNS
-  facebook: '#3b5998',
+  facebook: '#1877F2',
   twitter: '#1da1f2',
-  hatena: '#00a4de',
-  pocket: '#ef4056',
   newspicks: '#222',
-  wantedly: '#00aed1',
 }
 
 // Graduation
-const gradColors = {
-  gradBlack: `linear-gradient(225deg, ${baseColors.black20} 0%, ${baseColors.black30} 62%, ${baseColors.black10} 100%)`,
-  gradDeepGreen: `linear-gradient(225deg, #3ba395 0%, #21789a 100%)`,
-  gradOrangePink: `linear-gradient(225deg, #d754ad 0%, #f96785 59%, #fe7333 100%)`,
-  gradSilver: `linear-gradient(225deg, #e6e9ed 0%, #eef1f6 50%, #d1d8dc 100%)`,
-  gradPaleBlue: `linear-gradient(268deg, #c1dcf2 8%, #8db6e0 94%)`,
-}
+const gradColors = {}
 
 const aliasColors = {
   // text
