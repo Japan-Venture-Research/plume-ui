@@ -1,7 +1,7 @@
 {
   "name": "plume-ui",
   "description": "plume ui framework",
-  "version": "0.1.27",
+  "version": "0.1.28",
   "author": "plume-ui team",
   "main": "dist/index.js",
   "style": "dist/index.css",
@@ -72,7 +72,7 @@
     "lint:fix": "prettier --write 'src/**/*{ts,tsx,scss}'",
     "test": "jest",
     "test:type": "tsc --noEmit",
-    "fmt": "prettier --write '**/*{ts,tsx}'",
+    "fmt": "prettier --write '**/*{ts,tsx,scss}'",
     "prepublishOnly": "run-s clean lint build",
     "docs": "docz dev",
     "docs:build": "docz build",
