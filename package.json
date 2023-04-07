@@ -54,7 +54,7 @@
     "typescript": "^3.5.3",
     "unified": "^9.0.0",
     "unified-stream": "^1.0.5",
-    "unist-util-filter": "^2.0.0",
+    "unist-util-filter": "^4.0.1",
     "unist-util-find": "^1.0.1",
     "unist-util-map": "^2.0.0"
   },
