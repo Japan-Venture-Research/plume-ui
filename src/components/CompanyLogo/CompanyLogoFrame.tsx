@@ -1,10 +1,15 @@
 import * as React from 'react'
 import { Base, BaseProps } from '../../internal/Base'
 import classNames from 'classnames'
-import { CompanyLogoSize } from './CompanyLogo'
 
 const defaultTag = 'div'
 type Available = typeof defaultTag | 'span'
+export type CompanyLogoSize =
+  | 'extra-small'
+  | 'small'
+  | 'normal'
+  | 'large'
+  | 'extra-large'
 
 export type CompanyLogoFrameProps<T extends Available = typeof defaultTag> = {
   size?: CompanyLogoSize
@@ -13,14 +18,15 @@ export type CompanyLogoFrameProps<T extends Available = typeof defaultTag> = {
 
 export const CompanyLogoFrame = <T extends Available>({
   className,
+  size,
   ...props
 }: CompanyLogoFrameProps<T>) => {
-  const size = `is-${props.size || 'normal'}`
+  const sizeStr = `is-${size || 'normal'}`
 
   return (
     <Base
       as={props.as || defaultTag}
-      className={classNames(`pl-company-logo-frame`, size, className)}
+      className={classNames(`pl-company-logo-frame`, sizeStr, className)}
       {...props}
     />
   )

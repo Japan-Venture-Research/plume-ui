@@ -4,7 +4,7 @@ import { transformModifiers, Modifiable } from '../helpers/modifier'
 export type BaseProps<K extends keyof React.ReactHTML> = {
   as?: K
   style?: React.CSSProperties
-} & React.ComponentPropsWithoutRef<K> &
+} & React.AllHTMLAttributes<K> &
   Modifiable
 
 export const Base = <K extends keyof React.ReactHTML>(props: BaseProps<K>) => {

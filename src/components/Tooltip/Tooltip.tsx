@@ -15,6 +15,8 @@ export type TooltipProps<T extends Available = typeof defaultTag> = {
 
 export const Tooltip = <T extends Available>({
   className,
+  label,
+  place,
   ...props
 }: TooltipProps<T>) => {
   useEffect(() => {
@@ -26,10 +28,11 @@ export const Tooltip = <T extends Available>({
       className={classNames('pl-tooltip', className)}
       id={props.id}
     >
-      <span
+      <Base
+        as="span"
         data-for="pl-tooltip"
-        data-tip={props.label}
-        data-place={props.place || 'top'}
+        data-tip={label}
+        data-place={place || 'top'}
         data-effect="solid"
         data-offset="{'top': 0, 'bottom':0, 'left': 0, 'right':0}"
         data-arrow-color="transparent"

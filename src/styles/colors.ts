@@ -31,7 +31,7 @@ const baseColors = {
   facebook: '#1877F2',
   twitter: '#1da1f2',
   newspicks: '#222',
-}
+} as const
 
 // Graduation
 const gradColors = {}
@@ -53,10 +53,10 @@ const aliasColors = {
 
   // background
   backgroundGray: baseColors.gray40,
-}
+} as const
 
 export const colors = {
   ...baseColors,
   ...gradColors,
   ...aliasColors,
-}
+} as const

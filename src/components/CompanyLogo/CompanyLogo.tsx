@@ -1,16 +1,9 @@
 import * as React from 'react'
-import { CompanyLogoFrame } from './CompanyLogoFrame'
+import { CompanyLogoFrame, CompanyLogoSize } from './CompanyLogoFrame'
 import { CompanyLogoImage } from './CompanyLogoImage'
 
 export { CompanyLogoFrame, CompanyLogoFrameProps } from './CompanyLogoFrame'
 export { CompanyLogoImage, CompanyLogoImageProps } from './CompanyLogoImage'
-
-export type CompanyLogoSize =
-  | 'extra-small'
-  | 'small'
-  | 'normal'
-  | 'large'
-  | 'extra-large'
 
 type Props = {
   size?: CompanyLogoSize
