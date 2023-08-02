@@ -14,7 +14,7 @@ export type CompanyLogoSize =
 export type CompanyLogoFrameProps<T extends Available = typeof defaultTag> = {
   size?: CompanyLogoSize
   children: JSX.Element
-} & BaseProps<T>
+} & Omit<BaseProps<T>, 'size'>
 
 export const CompanyLogoFrame = <T extends Available>({
   className,
