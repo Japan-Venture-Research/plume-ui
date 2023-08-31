@@ -15,7 +15,8 @@ export type ButtonProps<T extends Available = typeof defaultTag> = {
   round?: boolean
   disabled?: boolean
   fullwidth?: boolean
-} & BaseProps<T>
+} & Omit<BaseProps<T>, 'size'>
+// ↑↑ Omitで親のsize属性を除外することは、AllHTMLAttributesのsize属性（typeがnumber）に上書きできないからです。
 
 export const Button = Object.assign(
   <T extends Available>({
