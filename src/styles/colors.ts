@@ -17,6 +17,8 @@ const baseColors = {
   brown30: '#ece8e7',
   blue50: '#337ab7',
   cyan10: '#f0f6f8',
+  cyan20: '#d8ecf0',
+  cyan30: '#c8e8ef',
   cyan40: '#a4dae6',
   cyan50: '#84cad9',
   cyan60: '#02B3C8',
