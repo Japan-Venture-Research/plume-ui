@@ -1,5 +1,5 @@
-$item-size: 44px;
-$prev-next-size: 72px;
+$item-size: 32px;
+$prev-next-size: 32px;
 
 .pl-pagination {
   display: flex;
@@ -11,14 +11,13 @@ $prev-next-size: 72px;
 .pl-pagination-previous,
 .pl-pagination-next {
   @include mq(small) {
-    height: 35px;
-    width: 35px;
+    height: 32px;
+    width: 32px;
   }
 
   &:hover,
   a:hover {
     text-decoration: none;
-
     &.is-disabled {
       cursor: default;
     }
@@ -27,12 +26,13 @@ $prev-next-size: 72px;
 
 .pl-pagination-previous,
 .pl-pagination-next {
-  background-color: $gray30;
+  background-color: none;
   height: $item-size;
   width: $prev-next-size;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
 
   i {
     color: $black10;
@@ -40,8 +40,14 @@ $prev-next-size: 72px;
     font-weight: bold;
   }
 
-  &.is-disabled {
+  &:not(.is-disabled) {
     background-color: transparent;
+    &:hover {
+      background-color: $gray30;
+    }
+  }
+  &.is-disabled {
+    cursor: default;
     i {
       color: $gray70;
     }
@@ -52,20 +58,23 @@ $prev-next-size: 72px;
   display: flex;
   align-items: center;
 
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
   margin: 0;
 }
 
 .pl-pagination-item {
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 14px;
   color: $black10;
   font-family: Roboto;
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 4px;
+  border: 1px solid $border;
 
   > a,
   > div,
@@ -74,18 +83,18 @@ $prev-next-size: 72px;
     align-items: center;
     justify-content: center;
     color: $black10;
-    padding: 10px 18px; // almost 44x44 size
-    max-width: 44px;
+    padding: 8px 4px 8px 4px;
+    min-width: 32px;
   }
 
-  &:hover {
+  &:hover:not(.is-active) {
     cursor: pointer;
-    background-color: $gray40;
+    background-color: $gray30;
   }
 
   &.is-active {
     color: $white00;
-    background-color: $black20;
+    background-color: $black10;
     cursor: default;
 
     > a,

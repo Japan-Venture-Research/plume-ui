@@ -10,9 +10,8 @@ export { CardImageProps } from './CardImage'
 const defaultTag = 'div'
 type Available = 'div' | 'span' | 'a'
 
-export type CardProps<T extends Available = typeof defaultTag> = {} & BaseProps<
-  T
->
+export type CardProps<T extends Available = typeof defaultTag> =
+  {} & BaseProps<T>
 
 export const Card = Object.assign(
   <T extends Available>({ className, ...props }: CardProps<T>) => {

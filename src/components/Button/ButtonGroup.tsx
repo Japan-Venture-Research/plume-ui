@@ -5,9 +5,8 @@ import { Base, BaseProps } from '../../internal/Base'
 const defaultTag = 'div'
 type Available = typeof defaultTag | 'span' | 'ul'
 
-export type ButtonGroupProps<
-  T extends Available = typeof defaultTag
-> = {} & BaseProps<T>
+export type ButtonGroupProps<T extends Available = typeof defaultTag> =
+  {} & BaseProps<T>
 
 export const ButtonGroup = <T extends Available>({
   className,

@@ -5,9 +5,8 @@ import { Base, BaseProps } from '../../internal/Base'
 const defaultTag = 'ul'
 type Available = typeof defaultTag | 'div'
 
-export type PaginationListProps<
-  T extends Available = typeof defaultTag
-> = {} & BaseProps<T>
+export type PaginationListProps<T extends Available = typeof defaultTag> =
+  {} & BaseProps<T>
 
 export const PaginationList = <T extends Available>({
   className,

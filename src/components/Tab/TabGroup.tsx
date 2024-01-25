@@ -5,9 +5,8 @@ import { Base, BaseProps } from '../../internal/Base'
 const defaultTag = 'div'
 type Available = typeof defaultTag | 'span' | 'ul'
 
-export type TabGroupProps<
-  T extends Available = typeof defaultTag
-> = {} & BaseProps<T>
+export type TabGroupProps<T extends Available = typeof defaultTag> =
+  {} & BaseProps<T>
 
 export const TabGroup = <T extends Available>({
   className,

@@ -5,9 +5,8 @@ import { Base, BaseProps } from '../../internal/Base'
 const defaultTag = 'div'
 type Available = typeof defaultTag | 'a'
 
-export type CardContentProps<
-  T extends Available = typeof defaultTag
-> = {} & BaseProps<T>
+export type CardContentProps<T extends Available = typeof defaultTag> =
+  {} & BaseProps<T>
 
 export const CardContent = <T extends Available>({
   className,
