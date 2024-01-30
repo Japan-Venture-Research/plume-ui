@@ -3,7 +3,7 @@ import './main.scss'
 // Styles
 export { colors } from './styles/colors'
 export { breakpoint, Breakpoint } from './styles/breakpoint'
-export { globalFont, displayFont } from './styles/font'
+export { globalFont } from './styles/font'
 
 // Components
 export { Tag, TagProps, TagGroupProps } from './components/Tag/Tag'
