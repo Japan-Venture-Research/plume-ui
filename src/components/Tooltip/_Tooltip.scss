@@ -10,6 +10,10 @@
     font-weight: normal;
     line-height: 1.25 !important;
 
+    &::before {
+      background-color: transparent !important;
+    }
+
     &.show {
       opacity: 1 !important;
     }
