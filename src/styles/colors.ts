@@ -10,7 +10,7 @@ const baseColors = {
   gray60: '#ccc',
   gray70: '#aaa',
   gray80: '#929292',
-  gray90: '#666',
+  gray90: '#6F6F6F',
   red50: '#ea6e67',
   red60: '#e7574f',
   red70: '#c7433c',
@@ -43,7 +43,7 @@ const aliasColors = {
   text: baseColors.black30,
   textInvert: baseColors.white00,
   textStrong: baseColors.black10,
-  textLight: baseColors.gray80,
+  textLight: baseColors.gray90,
   link: baseColors.blue50,
   linkInvert: baseColors.white00,
 
