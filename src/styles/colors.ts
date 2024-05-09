@@ -31,7 +31,7 @@ const baseColors = {
 
   // SNS
   facebook: '#1877F2',
-  twitter: '#1da1f2',
+  twitter: '#000',
   newspicks: '#222',
 } as const
 
